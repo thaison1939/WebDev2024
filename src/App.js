@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import QuestionList from './components/QuestionList/QuestionList';
+import questionsData from './_SAMPLE_DATA/questions.json';
 
 function App() {
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+      const questionArray = Object.values(questionsData);
+      setQuestions(questionArray);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+          <QuestionList questions={questions} />
+      </div>
   );
 }
 
