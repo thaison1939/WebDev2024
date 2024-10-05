@@ -34,7 +34,7 @@ const TodayFeaturedSite = ({image, title, paragraph, questions, answers, answere
                     </div>
 
                     <div className='stats-container'>
-                        <span className='number'>{answered}k</span>
+                        <span className='number'>{answered}%</span>
                         <br/>
                         <span className='label'>answered</span>
                     </div>
