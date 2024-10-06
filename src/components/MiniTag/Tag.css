@@ -1,0 +1,15 @@
+.name-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgb(241,242,243);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.name-tag:hover {
+    background-color: #b6b6b6;   
+    color: #000000;           
+}
