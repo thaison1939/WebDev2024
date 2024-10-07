@@ -1,15 +1,15 @@
 import React from 'react';
-import './Question.css';
+import styles from './Question.module.scss';
 
 const Question = ({ image, title, description, link }) => {
     return (
-        <div className="question-title">
-            <img src={image} alt={title} className="question-image" />
-            <div className="question-details">
-                <a href={link} className="question-link">
-                    <div className="question-title-text">{title}</div>
+        <div className={styles.container}>
+            <img src={image} alt={title} className={styles["question-image"]} />
+            <div className={styles["question-details"]}>
+                <a href={link} className={styles["question-link"]}>
+                    <div className={styles["question-title"]}>{title}</div>
                 </a>
-                <div className="question-description">{description}</div>
+                <div className={styles["question-description"]}>{description}</div>
             </div>
         </div>
     );

@@ -1,14 +1,15 @@
 import React from 'react';
 import Question from '../Question/Question';
-import './QuestionList.css'
+import styles from './QuestionList.module.scss'
 
 const QuestionList = ({ questions }) => {
     return (
-        <div className="question-list-container">
-            <div className="list-line"></div>
-            <ul className="question-list">
+        <div className={styles.container}>
+            <div className={styles["question-tab"]}>hot real-time</div>
+            <div className={styles["list-line"]}></div>
+            <ul className={styles["question-list"]}>
                 {questions.map((question, index) => (
-                    <li key={index} className="question-list-item">
+                    <li key={index} className={styles["question-list-item"]}>
                         <Question
                             image={question.image}
                             title={question.title}
@@ -18,7 +19,7 @@ const QuestionList = ({ questions }) => {
                     </li>
                 ))}
             </ul>
-            <div className="list-line"></div>
+            <div className={styles["list-line"]}></div>
         </div>
     );
 };

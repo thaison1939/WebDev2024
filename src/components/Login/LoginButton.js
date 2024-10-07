@@ -1,8 +1,8 @@
 import React from "react";
-import "./LoginButton.css";
+import styles from "./LoginButton.module.scss";
 
 const LoginButton = () => {
-  return <button className="login-button">Log in</button>;
+  return <button className={styles["login-button"]}>Log in</button>;
 };
 
 export default LoginButton;

@@ -1,42 +1,42 @@
 import React from 'react'
-import './TodayFeaturedSite.css'
+import styles from'./TodayFeaturedSite.module.scss'
 
 const TodayFeaturedSite = ({image, title, paragraph, questions, answers, answered}) => {
     return (
-        <div className = "container">
-                <div className='heading'>
-                    Today's Featured Site
-                </div>
-            <div className="containerwithoutheading">
-                <div className='content'>
-                    <div className='icon-image'>
+        <div className={styles.container}>
+            <div className={styles['heading']}>
+                Today's Featured Site
+            </div>
+            <div className={styles['container-without-heading']}>
+                <div>
+                    <div className={styles['icon-image']}>
                         <img src={image} alt={title}/>
                     </div>
 
-                    <div className='right-panel'>
+                    <div className={styles['right-panel']}>
                         <a href='https://chemistry.stackexchange.com/'>{title}</a>
                         <br/>
                         {paragraph}
                     </div>     
                 </div>
 
-                <div className='statistics'>
-                    <div className='stats-container'>
-                        <span className='number'>{questions}k</span>
+                <div className={styles['statistics']}>
+                    <div className={styles['stats-container']}>
+                        <span className={styles['number']}>{questions}k</span>
                         <br/>
-                        <span className='label'>questions</span>
+                        <span className={styles['label']}>questions</span>
                     </div>
 
-                    <div className='stats-container'>
-                        <span className='number'>{answers}k</span>
+                    <div className={styles['stats-container']}>
+                        <span className={styles['number']}>{answers}k</span>
                         <br/>
-                        <span className='label'>answers</span>
+                        <span className={styles['label']}>answers</span>
                     </div>
 
-                    <div className='stats-container'>
-                        <span className='number'>{answered}%</span>
+                    <div className={styles['stats-container']}>
+                        <span className={styles['number']}>{answered}%</span>
                         <br/>
-                        <span className='label'>answered</span>
+                        <span className={styles['label']}>answered</span>
                     </div>
                 </div>
             </div>
