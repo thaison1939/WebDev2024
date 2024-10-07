@@ -10,6 +10,9 @@ import TodayFeaturedSite from './components/TodayFeaturedSite/TodayFeaturedSite'
 import siteData from './_SAMPLE_DATA/todayfeaturedsite.json';
 import Footer from './components/Footer/Footer';
 
+import Header from './components/Header/Header';
+import TopNetworkSites from './components/TopNetworkSites/TopNetworkSites';
+
 function App() {
   const [questions, setQuestions] = useState([]);
 
@@ -21,6 +24,7 @@ function App() {
   
   return (
       <div className={styles.container}>
+        <div><Header/></div>
         <QuestionList questions={questions} />
         <TodayFeaturedSite
           image={siteData.image}
@@ -30,6 +34,7 @@ function App() {
           answers={siteData.answers}
           answered={siteData.answered}
         />
+        <TopNetworkSites/>
       </div>
   );
 }
