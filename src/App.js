@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import QuestionList from './components/QuestionList/QuestionList';
 import questionsData from './_SAMPLE_DATA/questions.json';
+import Navbar from './components/Navbar/Navbar';
+
 
 import styles from './App.module.scss'
 
