@@ -4,11 +4,11 @@ import questionsData from './_SAMPLE_DATA/questions.json';
 import Navbar from './components/Navbar/Navbar';
 
 
-import Tag from './components/MiniTag/Tag';
-import tagData from './_SAMPLE_DATA/tagName.json';
+import styles from './App.module.scss'
 
 import TodayFeaturedSite from './components/TodayFeaturedSite/TodayFeaturedSite';
 import siteData from './_SAMPLE_DATA/todayfeaturedsite.json';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [questions, setQuestions] = useState([]);
@@ -20,27 +20,16 @@ function App() {
 
   
   return (
-      <div>
-        <div>
-            <Navbar/>
-            <QuestionList questions={questions} />
-        </div>
-
-        <div> {tagData.tags.map((tag, index) => (
-            <Tag key={index} name_tag={tag}/> 
-        ))}
-        </div>
-
-        <div>
-            <TodayFeaturedSite
-              image={siteData.image}
-              title={siteData.title}
-              paragraph={siteData.paragraph}
-              questions={siteData.questions}
-              answers={siteData.answers}
-              answered={siteData.answered}
-            />
-        </div>
+      <div className={styles.container}>
+        <QuestionList questions={questions} />
+        <TodayFeaturedSite
+          image={siteData.image}
+          title={siteData.title}
+          paragraph={siteData.paragraph}
+          questions={siteData.questions}
+          answers={siteData.answers}
+          answered={siteData.answered}
+        />
       </div>
   );
 }

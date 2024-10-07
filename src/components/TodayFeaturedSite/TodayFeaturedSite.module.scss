@@ -1,0 +1,66 @@
+.container{
+    display: inline-flex;
+    flex-direction: column;
+    
+    .container-without-heading {
+        display: inline-block;
+        border: 2px solid #e8edee;
+        padding: 5px;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    
+    .heading {
+        display: inline-block;
+        color: #000000;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 27px;
+        margin-bottom: 5px;
+    }
+    
+    .icon-image {
+        float: left;
+    }
+    
+    .icon-image img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .right-panel {
+        display: inline-block;
+        width: 150px;
+        color: #444444;
+        font-size: 12px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .right-panel a {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    
+    .satistics {
+        width: 150px;
+    }
+    
+    .stats-container {
+        float: left;
+        margin-right: 20px;
+    }
+    
+    .number {
+        color: red;
+        font-size: 25px;
+    }
+    
+    .label {
+        font-size: 12px;
+        font-weight: 700;
+        color: #444444;
+    }
+}
+
+

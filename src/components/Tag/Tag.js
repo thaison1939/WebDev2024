@@ -1,9 +1,9 @@
 import React from "react";
-import './Tag.css';
+import styles from './Tag.module.scss';
 
 const Tag = ({name_tag}) => {
     return (
-        <div className="name-tag">
+        <div className={styles["name-tag"]}>
             {name_tag}
         </div>
     );
