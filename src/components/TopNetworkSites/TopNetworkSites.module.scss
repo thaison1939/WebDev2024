@@ -1,0 +1,64 @@
+.side-bar {
+    padding: 0px;
+    width: auto;
+    background-color: transparent;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 800px;
+}
+.heading{
+    color: #444;
+    font-size: 16px;
+    margin: 3px 0 3px 0;
+    font-weight: bold;
+    line-height: 27px;
+}
+
+.topnetworksites-nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    margin-bottom: 0px;
+    text-align: right;
+    margin-top: 8px;
+}
+
+.topnetworksites-link {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #12457c;       
+    font-size: 12px;
+}
+
+.topnetworksites-link:hover{
+    color: #4ca3d7;    
+}
+
+
+.topnetworksites-logo {
+    height: 16px;
+    width: 16px; 
+    margin-right: 5px;       
+}
+
+.topnetworksites-footer {
+    text-align: left;
+    margin: 0px 40px 1px;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    color: #12457c;
+}
+
+.topnetworksites-footer:hover{
+    color: #4ca3d7; 
+}
+
+
+
