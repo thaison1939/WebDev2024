@@ -21,6 +21,7 @@ function App() {
   
   return (
       <div className={styles.container}>
+        <Navbar/>
         <QuestionList questions={questions} />
         <TodayFeaturedSite
           image={siteData.image}
