@@ -23,7 +23,14 @@ function App() {
 
   
   return (
-      <div className={styles.container}>
+    // Put the Navbar at the top of the App component
+    // Put the Header component below the Navbar
+    // Put the TopNetworkSites component below the FeaturedSite component
+    // Put the Footer component at the bottom of the App component
+    <div className={styles.container}>
+      <Navbar />
+      <Header />
+      <div className={styles["content-container"]}>
         <QuestionList questions={questions} />
         <TodayFeaturedSite
           image={siteData.image}
@@ -34,6 +41,8 @@ function App() {
           answered={siteData.answered}
         />
       </div>
+      <Footer />
+    </div>
   );
 }
 
