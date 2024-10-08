@@ -1,0 +1,29 @@
+.heading    {
+    color: #444;
+    font-size: 15px;
+
+    font-weight: bold;
+    line-height: 27px;
+}
+
+.asker-list-container {
+    color: #444;
+    font-size: 12px;
+    overflow: auto;
+    clear: both;
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 220px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .asker-list-item {
+        list-style-type: none;
+    }
+}
+
+
