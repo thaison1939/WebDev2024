@@ -24,7 +24,6 @@ function App() {
   
   return (
       <div className={styles.container}>
-        <div><Header/></div>
         <QuestionList questions={questions} />
         <TodayFeaturedSite
           image={siteData.image}
@@ -34,7 +33,6 @@ function App() {
           answers={siteData.answers}
           answered={siteData.answered}
         />
-        <TopNetworkSites/>
       </div>
   );
 }
