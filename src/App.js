@@ -10,6 +10,9 @@ import TodayFeaturedSite from './components/TodayFeaturedSite/TodayFeaturedSite'
 import siteData from './_SAMPLE_DATA/todayfeaturedsite.json';
 import Footer from './components/Footer/Footer';
 
+import Header from './components/Header/Header';
+import TopNetworkSites from './components/TopNetworkSites/TopNetworkSites';
+
 function App() {
   const [questions, setQuestions] = useState([]);
 
@@ -20,8 +23,14 @@ function App() {
 
   
   return (
-      <div className={styles.container}>
-        <Navbar/>
+    // Put the Navbar at the top of the App component
+    // Put the Header component below the Navbar
+    // Put the TopNetworkSites component below the FeaturedSite component
+    // Put the Footer component at the bottom of the App component
+    <div className={styles.container}>
+      <Navbar />
+      <Header />
+      <div className={styles["content-container"]}>
         <QuestionList questions={questions} />
         <TodayFeaturedSite
           image={siteData.image}
@@ -32,6 +41,8 @@ function App() {
           answered={siteData.answered}
         />
       </div>
+      <Footer />
+    </div>
   );
 }
 

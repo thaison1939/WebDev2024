@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Sheldon",
+      "field": "Science Fiction",
+      "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/charmander.avif",
+      "link": "/"
+    },
+    {
+      "name": "Kwangaroo",
+      "field": "Ritualism",
+      "image": "https://img.pokemondb.net/artwork/avif/mewtwo.avif",
+      "link": "/"
+    },
+    {
+      "name": "Kiaya",
+      "field": "RPG",
+      "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/gallade.avif",
+      "link": "/"
+    },
+    {
+      "name": "Mc Donnald",
+      "field": "Food",
+      "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/pangoro.avif",
+      "link": "/"
+    },
+    {
+      "name": "Enimem",
+      "field": "Rap",
+      "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/finneon.avif",
+      "link": "/"
+    },
+    {
+      "name": "Nahida",
+      "field": "Biology",
+      "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/lycanroc.avif",
+      "link": "/"
+    },
+    {
+      "name": "Ryzen",
+      "field": "Computer Science",
+      "image": "https://img.pokemondb.net/sprites/scarlet-violet/normal/gimmighoul.png",
+      "link": "/"
+    },
+    {
+      "name": "2B",
+      "field": "Robot",
+      "image": "https://img.pokemondb.net/sprites/home/normal/2x/avif/vivillon.avif",
+      "link": "/"
+    }
+  ]
+  
