@@ -49,7 +49,7 @@ function TopNetworkSites(){
             </nav>
             <p className={styles["topnetworksites-footer"]}>
                 <a href = "https://stackexchange.com/sites" className={styles["topnetworksites-footer"]}>
-                    <b>view all 182 sites »</b>
+                    <b> View all 182 sites »</b>
                 </a>
             </p>
         </div>
