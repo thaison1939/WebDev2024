@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import LoginButton from "../Login/LoginButton";
 import styles from './Navbar.module.scss';
 
@@ -8,6 +8,21 @@ const Navbar = () => {
     const showSearchBar = () => {
         setSearchVisible(!isSearchVisible);
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 650) {
+                setSearchVisible(false);
+            }
+        }
+    
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <nav className={styles["navbar"]}>
