@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import LoginButton from "../Login/LoginButton";
 import styles from './Navbar.module.scss';
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const [isSearchVisible, setSearchVisible] = useState(false);
@@ -25,16 +26,16 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={styles["navbar"]}>
+        <nav className={styles.navbar}>
             <div className={styles["navbar-logo"]}>
-                <img id="colored_logo" src='/colored_logo.png' alt="logo"></img>
+                <img id="colored_logo" src='/colored_logo.png' alt="colored_logo"></img>
                 <a href="/" className={styles["logo-text"]}>Stack<span> Exchange</span></a>
             </div>
 
             <ul className={styles["nav-links"]}>
-                <li><a href="/tour">Tour</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/meta">Meta</a></li>
+                <li><NavLink to="/tour">Tour</NavLink></li>
+                <li><NavLink href="/about">About Us</NavLink></li>
+                <li><NavLink href="/meta">Meta</NavLink></li>
             </ul>
 
             <div className={styles["navbar-center"]}>
