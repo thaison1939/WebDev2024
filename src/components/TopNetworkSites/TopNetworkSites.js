@@ -3,7 +3,7 @@ import styles from'./TopNetworkSites.module.scss';
 
 function TopNetworkSites(){
     return (
-        <div className={styles["side-bar"]}>
+        <div className={styles.container}>
             <div className={styles["heading"]}>Top Network Sites</div>
             <nav className={styles["topnetworksites-nav-links"]}>
                 <a href = "https://stackoverflow.com/" className={styles["topnetworksites-link"]}>

@@ -8,18 +8,16 @@ const TodayFeaturedSite = ({image, title, paragraph, questions, answers, answere
                 Today's Featured Site
             </div>
             <div className={styles['container-without-heading']}>
-                <div>
-                    <div className={styles['icon-image']}>
+                <div className={styles['icon-image']}>
+                    <a href='https://chemistry.stackexchange.com/'>
                         <img src={image} alt={title}/>
-                    </div>
-
-                    <div className={styles['right-panel']}>
-                        <a href='https://chemistry.stackexchange.com/'>{title}</a>
-                        <br/>
-                        {paragraph}
-                    </div>     
+                    </a>
                 </div>
-
+                <div className={styles['right-panel']}>
+                    <a href='https://chemistry.stackexchange.com/'>{title}</a>
+                    <br/>
+                    {paragraph}
+                </div>     
                 <div className={styles['statistics']}>
                     <div className={styles['stats-container']}>
                         <span className={styles['number']}>{questions}k</span>

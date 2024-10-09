@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import QuestionList from './components/QuestionList/QuestionList';
 import questionsData from './_SAMPLE_DATA/questions.json';
+import askersData from './_SAMPLE_DATA/topAskerList.json';
 import Navbar from './components/Navbar/Navbar';
-
-
 import styles from './App.module.scss'
-
-import TodayFeaturedSite from './components/TodayFeaturedSite/TodayFeaturedSite';
-import siteData from './_SAMPLE_DATA/todayfeaturedsite.json';
 import Footer from './components/Footer/Footer';
-
 import Header from './components/Header/Header';
-import TopNetworkSites from './components/TopNetworkSites/TopNetworkSites';
+import SideBar from './components/SideBar/SideBar';
 
 function App() {
   const [questions, setQuestions] = useState([]);
@@ -21,25 +16,26 @@ function App() {
       setQuestions(questionArray);
   }, []);
 
+  const [askers, setAskers] = useState([]);
+
+  useEffect(() => {
+      const askerArray = Object.values(askersData);
+      setAskers(askerArray);
+  }, []);
   
   return (
-    // Put the Navbar at the top of the App component
-    // Put the Header component below the Navbar
-    // Put the TopNetworkSites component below the FeaturedSite component
-    // Put the Footer component at the bottom of the App component
     <div className={styles.container}>
       <Navbar />
-      <Header />
-      <div className={styles["content-container"]}>
-        <QuestionList questions={questions} />
-        <TodayFeaturedSite
-          image={siteData.image}
-          title={siteData.title}
-          paragraph={siteData.paragraph}
-          questions={siteData.questions}
-          answers={siteData.answers}
-          answered={siteData.answered}
-        />
+      <div className={styles["header"]}>
+        <div className={styles["wrapper"]}>
+          <Header />
+        </div>
+      </div>
+      <div className={styles["wrapper"]}>
+        <div className={styles["content"]}>
+          <QuestionList questions={questions} />
+          <SideBar askers={askers}/>
+        </div>
       </div>
       <Footer />
     </div>

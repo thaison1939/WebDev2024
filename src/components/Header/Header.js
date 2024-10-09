@@ -3,18 +3,23 @@ import styles from './Header.module.scss';
 
 function Header() {
   return (
-    <header className={styles["siteHeader"]}>
-      <div className={styles["logo-container"]}>
+    <header className={styles["site-header"]}>
+      <div>
         <a href ="http://localhost:3000/">
-        <img src="/se-logo.png" alt="StackExchange Logo" className={styles["logo-header"]} />
+          <h1>Stack Exchange</h1>
         </a>
-
       </div>
-      <nav className={styles["header-nav-links"]}>
-        <a href="#all-sites" className={styles["inside-header-link"]}>All Sites</a>
-        <a href="#top-users" className={styles["inside-header-link"]}>Top 400 Users</a>
-        <a href="#digests" className={styles["inside-header-link"]}>Digests</a>
-      </nav>
+      <ul className={styles["header-nav-links"]}>
+        <li>
+          <a href="#all-sites">All Sites</a>
+        </li>
+        <li>
+          <a href="#top-users">Top 400 Users</a>
+        </li>
+        <li>
+          <a href="#digests">Digests</a>
+        </li>
+      </ul>
     </header>
   );
 }
