@@ -1,0 +1,20 @@
+{
+    "58b643bd-9260-4f87-89e6-3acb157e10bc": {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
+        "title": "What is React?",
+        "description": "React is a JavaScript library for building user interfaces.",
+        "link": "#"
+    },
+    "55afc9fb-c3e8-4a1d-af9b-2a8c0308a4ba": {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
+        "title": "How does useState work?",
+        "description": "useState is a Hook that allows you to add state to functional components.",
+        "link": "#"
+    },
+    "85d4f6cc-2c65-42c5-948e-959268a2521f": {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
+        "title": "What is a component?",
+        "description": "A component is a reusable piece of UI in React.",
+        "link": "#"
+    }
+}
