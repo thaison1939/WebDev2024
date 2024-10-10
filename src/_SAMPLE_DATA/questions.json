@@ -1,63 +1,14 @@
 {
-    "58b643bd-9260-4f87-89e6-3acb157e10bc": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
-        "title": "What is React?",
-        "description": "React is a JavaScript library for building user interfaces.",
-        "link": "#"
-    },
-    "55afc9fb-c3e8-4a1d-af9b-2a8c0308a4ba": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
-        "title": "How does useState work?",
-        "description": "useState is a Hook that allows you to add state to functional components.",
-        "link": "#"
-    },
-    "85d4f6cc-2c65-42c5-948e-959268a2521f": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
-        "title": "What is a component?",
-        "description": "A component is a reusable piece of UI in React.",
-        "link": "#"
-    },
-    "b2d7f8e1-3c4e-4a3e-9f8b-1c2d3e4f5a6b": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
-        "title": "What is JSX?",
-        "description": "JSX is a syntax extension for JavaScript that looks similar to XML or HTML.",
-        "link": "#"
-    },
-    "c3e8f9a1-4b2d-4c3e-9a1b-2d3e4f5a6b7c": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
-        "title": "What is a Hook?",
-        "description": "Hooks are functions that let you use state and other React features in functional components.",
-        "link": "#"
-    },
-    "d4f9a2b1-5c3e-4d4e-9b2c-3e4f5a6b7c8d": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
-        "title": "What is Redux?",
-        "description": "Redux is a predictable state container for JavaScript apps, often used with React.",
-        "link": "#"
-    }
-    ,
-    "e5a6b7c8-6d4e-4e5f-9c3d-4f5a6b7c8d9e": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
-        "title": "What is Context API?",
-        "description": "The Context API is a React structure that enables you to exchange unique details and assists in solving prop-drilling.",
-        "link": "#"
-    },
-    "f6b7c8d9-7e5f-4f6a-9d4e-5a6b7c8d9e0f": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
-        "title": "What is Prop Drilling?",
-        "description": "Prop drilling is the process of passing data from a parent component to a deeply nested child component through intermediary components.",
-        "link": "#"
-    },
-    "g7c8d9e0-8f6a-4g7b-9e5f-6b7c8d9e0f1g": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
-        "title": "What is useEffect?",
-        "description": "useEffect is a Hook that lets you perform side effects in functional components.",
-        "link": "#"
-    },
-    "h8d9e0f1-9g7b-4h8c-9f6a-7c8d9e0f1g2h": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
-        "title": "What is a Higher-Order Component?",
-        "description": "A higher-order component (HOC) is a function that takes a component and returns a new component.",
-        "link": "#"
-    }
+    "questions": [
+        {
+            "id": "58b643bd-9260-4f87-89e6-3acb157e10bc",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
+            "title": "What is React?",
+            "tags": ["react", "javascript", "frontend"],
+            "answer": 3,
+            "created_time": "2021-01-01T12:00:00",
+            "author": "John Doe",
+            "field": "Web Development"
+        }
+    ]
 }
