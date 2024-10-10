@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './UserInfo.module.scss';
 
-const UserInfo = ({ time, avatar, name, icon, repuScore, gold, silver, bronze }) => {
+const UserInfo = ({ time, avatar, name, icon, repuScore, gold, silver, bronze, goldImg, silverImg, bronzeImg }) => {
     return (
         <div className={styles.user-info}>
             <div className={styles["time"]}>
@@ -17,11 +17,11 @@ const UserInfo = ({ time, avatar, name, icon, repuScore, gold, silver, bronze })
                 </div>
                 <div className={styles["repu-score"]}>
                     <p>{repuScore}</p>
-                    <img src=""></img> /*hard code gold img*/
+                    <img src={goldImg}></img> /*hard code gold img*/
                     <p>{gold}</p>
-                    <img src=""></img>
+                    <img src={silverImg}></img>
                     <p>{silver}</p>
-                    <img src=""></img>
+                    <img src={bronzeImg}></img>
                     <p>{bronze}</p>
                 </div>
             </div>
