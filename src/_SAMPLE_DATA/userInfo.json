@@ -1,0 +1,22 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "time": "yesterday",
+        "username": "cag51",
+        "avatar": "",
+        "reputation": 71600,
+        "badges": {
+          "gold": 26,
+          "silver": 193,
+          "bronze": 265
+        },
+        "badgesImages": {
+          "gold": "../../gold.png",
+          "silver": "../../silver.png",
+          "bronze": "../../bronze.png"
+        },
+        "icon": "♦" 
+      }
+    ]
+  }

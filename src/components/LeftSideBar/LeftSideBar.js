@@ -1,15 +1,22 @@
 import React from 'react';
 import styles from './left-sidebar.module.scss'
 
-const leftSideBar = ({ img, alt, channelName }) => {
+const leftSideBar = ({ channels, img, alt }) => {
     return (
         <div className={styles.leftSideBar}>
-            <div className={styles["channelName"]}>
-                <img src={img} alt={alt} className={styles["icon"]}/>
-                <span className={styles["channel"]}>{channelName}</span>
-            </div>   
+                {channels.map((channel, index) => (
+                    <div key={index}>
+                        <div className={styles["channelName"]}>
+                            <img src={channel.img} alt={channel.alt} className={styles["icon"]}/>
+                            <span className={styles["channel"]}>{channel.name}</span>
+                        </div>
+
+                        {index == 2 && <div className={styles["divide"]}></div>}
+                    </div>  
+                ))} 
 
             <div className={styles.team}>
+                <div className={styles.bold-text}>TEAMS</div>
                 <img src={img} alt={alt}></img>
                 <p><span className={styles["bold"]}>Now available on Stack Overflow for Teams!</span> AI features where you work: search, IDE, and chat.</p>
                 <button className={styles["orangebtn"]}>Learn more</button>

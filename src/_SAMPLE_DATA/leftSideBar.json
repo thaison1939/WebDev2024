@@ -1,0 +1,40 @@
+{
+    "sidebar-content": [
+        {
+            "id": "d85d5424-4f40-4a1d-a37b-e12875b8fd33",
+            "channels": [
+                {
+                    "img": "../../home.png",
+                    "name": "Home",
+                    "alt": "home-icon"
+                },
+
+                {
+                    "img": "../../question-icon.png",
+                    "name": "Questions",
+                    "alt": "question-icon"
+                },
+
+                {
+                    "img": "../../tag.png",
+                    "name": "Tags",
+                    "alt": "tags-icon"
+                },
+
+                {
+                    "img": "../../companion.png",
+                    "name": "Users",
+                    "alt": "users-icon"
+                },
+
+                {
+                    "img": "../../answer-icon.png",
+                    "name": "Unanswered",
+                    "alt": "answer-icon"
+                }
+            ],
+            "img": "../../Overflow-AI.png",
+            "alt": "overflow-AI"
+        }
+    ]
+}

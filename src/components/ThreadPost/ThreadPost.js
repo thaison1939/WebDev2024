@@ -3,7 +3,6 @@ import styles from './ThreadPost.module.scss'
 import LeftSideBar from '../LeftSideBar/LeftSideBar';
 import Related from '../Related/Related';
 import Voting from '../Voting/Voting';
-import userInfoData from '../../_SAMPLE_DATA/userInfoData.json';
 import UserInfo from '../UserInfo/UserInfo';
 
 
