@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin: 0;
     padding: 20px;
     
@@ -10,8 +10,26 @@
         margin-right: 15px;
     }
     
-    .question-details {
+    .question-content {
         flex: 1;
+    }
+
+    .question-details {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 5px;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .details {
+        margin-left: 0px; /* Space between tags and the info section */
+        font-size: 12px;
+        color: hsl(210, 8%, 68%);
     }
     
     .question-link {
@@ -29,10 +47,4 @@
         margin: 0;
         display: inline;
     }
-    
-    .question-description {
-        font-size: 12px;
-        color: #949494;
-        margin-top: 5px;
-    }    
 }

@@ -13,8 +13,12 @@ const QuestionList = ({ questions }) => {
                         <Question
                             image={question.image}
                             title={question.title}
-                            description={question.description}
                             link={question.link}
+                            tags={question.tags}
+                            answer={question.answer}
+                            created_time={question.created_time}
+                            author={question.author}
+                            field={question.field}
                         />
                     </li>
                 ))}

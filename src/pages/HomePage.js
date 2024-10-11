@@ -12,7 +12,7 @@ const HomePage = () => {
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
-      const questionArray = Object.values(questionsData);
+      const questionArray = Object.values(questionsData["questions"]);
       setQuestions(questionArray);
   }, []);
 

@@ -1,10 +1,4 @@
-.heading    {
-    color: #444;
-    font-size: 15px;
 
-    font-weight: bold;
-    line-height: 27px;
-}
 
 .asker-list-container {
     color: #444;
@@ -13,12 +7,21 @@
     clear: both;
     padding: 0;
     margin-left: 0;
+    padding-top: 10px;
     margin-bottom: 10px;
     width: 220px;
 
     ul {
         margin: 0;
         padding: 0;
+    }
+
+    .heading    {
+        color: #444;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 27px;
+        display: inline;
     }
     
     .asker-list-item {
