@@ -5,7 +5,7 @@ import TopAskerList from "../TopAskerList/TopAskerList";
 import TopNetworkSites from "../TopNetworkSites/TopNetworkSites";
 import siteData from "../../_SAMPLE_DATA/todayfeaturedsite.json";
 
-const SideBar = ({askers,sites}) => {
+const SideBar = ({askers}) => {
     return (
         <div className={styles.container}>
             <TodayFeaturedSite
@@ -17,7 +17,7 @@ const SideBar = ({askers,sites}) => {
                 answered={siteData.answered}
             />
             <TopAskerList askers={askers}/>
-            <TopNetworkSites sites={sites}/>
+            <TopNetworkSites/>
         </div>
     )
 }
