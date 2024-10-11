@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import QuestionList from '../components/QuestionList/QuestionList';
 import questionsData from '../_SAMPLE_DATA/questions.json';
 import askersData from '../_SAMPLE_DATA/topAskerList.json';
+import sitesData from '../_SAMPLE_DATA/topNetworkSites.json';
 import Navbar from '../components/Navbar/Navbar';
 import styles from '../App.module.scss'
 import Footer from '../components/Footer/Footer';
@@ -22,6 +23,13 @@ const HomePage = () => {
       const askerArray = Object.values(askersData);
       setAskers(askerArray);
   }, []);
+
+  const [sites, setSites] = useState([]);
+
+  useEffect(() => {
+    const siteArray = Object.values(sitesData["sites"]);
+    setSites(siteArray);
+  }, []);
   
     return (
     <div className={styles.container}>
@@ -35,6 +43,7 @@ const HomePage = () => {
         <div className={styles["content"]}>
           <QuestionList questions={questions} />
           <SideBar askers={askers}/>
+          <SideBar sites={sites}/>
         </div>
       </div>
       <Footer />

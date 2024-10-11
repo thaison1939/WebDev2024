@@ -1,0 +1,63 @@
+[
+    {
+        "name" : "Stack Overflow logo",
+        "image" : "https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico",
+        "link" :"https://stackoverflow.com/",
+        "content" : "Stack Overflow" 
+    },
+    {
+        "name" :"Mathematics logo",
+        "image" : "https://cdn.sstatic.net/Sites/math/Img/favicon.ico",
+        "link" : "https://math.stackexchange.com/",
+        "content" :"Mathematics "
+
+    },
+    {
+        "name" : "Super User logo",
+        "image" : "https://cdn.sstatic.net/Sites/superuser/Img/favicon.ico",
+        "link" : "https://superuser.com/",
+        "content" :"Super User"
+    },
+    {
+        "name" : "Ask Ubuntu logo",
+        "image" : "https://cdn.sstatic.net/Sites/askubuntu/Img/favicon.ico" ,
+        "link" :"https://askubuntu.com/",
+        "content" :"Ask Ubuntu"
+    },
+    {
+        "name" : "Meta Stack Exchange logo",
+        "image" : "https://meta.stackexchange.com/Content/Sites/stackexchangemeta/Img/favicon.ico" ,
+        "link" :"https://meta.stackexchange.com/",
+        "content" :"Meta Stack Exchange "
+    },
+    {
+        "name" : "Server Fault logo",
+        "image" : "https://cdn.sstatic.net/Sites/serverfault/Img/favicon.ico" ,
+        "link" :"https://serverfault.com/",
+        "content" :"Server Fault "
+    },
+    {
+        "name" : "Unix & Linux logo",
+        "image" : "https://cdn.sstatic.net/Sites/unix/Img/favicon.ico" ,
+        "link" :"https://unix.stackexchange.com/",
+        "content" :"Unix & Linux"
+    },
+    {
+        "name" : "Stack Overflow на русском logo ",
+        "image" : "https://cdn.sstatic.net/Sites/ru/Img/favicon.ico" ,
+        "link" :"https://ru.stackoverflow.com/",
+        "content" :"Stack Overflow на русском "
+    },
+    {
+        "name" : "English Language & Usage logo",
+        "image" : "https://cdn.sstatic.net/Sites/english/Img/favicon.ico?v=678003fec3e2" ,
+        "link" :"https://english.stackexchange.com/",
+        "content" :"English Language & Usage "
+    },
+    {
+        "name" : "Physics logo",
+        "image" : "https://cdn.sstatic.net/Sites/physics/Img/favicon.ico?v=678003fec3e2" ,
+        "link" :"https://physics.stackexchange.com/",
+        "content" :"Physics "
+    }
+]
