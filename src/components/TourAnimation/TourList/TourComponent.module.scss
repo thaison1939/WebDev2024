@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    max-width: 2000px;        
+    margin: 0 auto;           
+    padding: 0px;                      
+    box-sizing: border-box;
+    flex-direction: column;
+    
+    .title {
+        font-size: 28px;
+        color: #222;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 70%;
+        gap: 20px;
+        align-items: center;
+
+        .para-content {
+            flex: 3;
+        }
+
+        .arrow {
+            text-align: center;
+            flex: 1;
+            position: relative;
+            left: 50px;
+        }
+
+        .image {
+            flex: 3;
+        }
+    }
+}
