@@ -3,14 +3,13 @@ import Question from '../Question/Question';
 import styles from './QuestionList.module.scss'
 
 const QuestionList = ({ questions }) => {
-    const [sortBy, setSortBy] = useState('hot'); // State to track the sorting option
+    const [sortBy, setSortBy] = useState('hot');
 
-    // Sorting logic based on the selected option
     const sortedQuestions = [...questions].sort((a, b) => {
         if (sortBy === 'hot') {
-            return b.answer - a.answer; // Sort by answers (hot)
+            return b.answer - a.answer;
         } else {
-            return new Date(b.created_time) - new Date(a.created_time); // Sort by created time (real-time)
+            return new Date(b.created_time) - new Date(a.created_time);
         }
     });
 
