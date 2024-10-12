@@ -19,7 +19,7 @@ const HomePage = () => {
   const [askers, setAskers] = useState([]);
 
   useEffect(() => {
-      const askerArray = Object.values(askersData);
+      const askerArray = Object.values(askersData["askers"]);
       setAskers(askerArray);
   }, []);
   
