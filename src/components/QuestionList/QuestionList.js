@@ -1,14 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Question from '../Question/Question';
 import styles from './QuestionList.module.scss'
 
 const QuestionList = ({ questions }) => {
+    const [sortBy, setSortBy] = useState('hot');
+
+    const sortedQuestions = [...questions].sort((a, b) => {
+        if (sortBy === 'hot') {
+            return b.answer - a.answer;
+        } else {
+            return new Date(b.created_time) - new Date(a.created_time);
+        }
+    });
+
     return (
         <div className={styles.container}>
-            <div className={styles["question-tab"]}>hot real-time</div>
+            <div className={styles["question-tab"]}>
+                <div className={styles["tabs"]}>
+                    <a 
+                        onClick={() => setSortBy('hot')} 
+                        className={`${sortBy === 'hot' ? styles.active : ''}`}
+                    >
+                        hot
+                    </a>
+                    <a 
+                        onClick={() => setSortBy('real-time')} 
+                        className={`${sortBy === 'real-time' ? styles.active : ''}`}
+                    >
+                        real-time
+                    </a>
+                </div>
+            </div>
             <div className={styles["list-line"]}></div>
             <ul className={styles["question-list"]}>
-                {questions.map((question, index) => (
+                {sortedQuestions.map((question, index) => (
                     <li key={index} className={styles["question-list-item"]}>
                         <Question
                             image={question.image}
