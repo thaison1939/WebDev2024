@@ -1,0 +1,27 @@
+[
+    {
+        "title": "bronze badge: Asked first question with score of 1 or more",
+        "td_context": "Asked first question with score of 1 or more",
+        "text": "Student"
+    },
+    {
+        "title": "bronze badge: First edit",
+        "td_context": "First edit",
+        "text": "Editor"
+    },
+    {
+        "title": "silver badge: Answer score of 25 or more",
+        "td_context": "Answer score of 25 or more",
+        "text": "Good Answer"
+    },
+    {
+        "title": "silver badge: Voted 300 or more times",
+        "td_context": "Voted 300 or more times",
+        "text": "Civic Duty"
+    },
+    {
+        "title": "gold badge: Asked a question with 10,000 views",
+        "td_context": "Asked a question with 10,000 views",
+        "text": "Famous Question"
+    }
+]
