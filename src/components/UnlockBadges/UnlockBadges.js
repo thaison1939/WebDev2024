@@ -4,10 +4,10 @@ import badgeData from '../../_SAMPLE_DATA/tourBadge.json';
 
 function UnlockBadges() {
     const [badges] = useState(badgeData);
-    const container = useRef(null); // Define the container here
+    const container = useRef(null); 
 
     return (
-        <div ref={container} className={styles.badges-container}> {/* Use ref here */}
+        <div ref={container} className={styles["badges-container"]}> 
             <h2 className={styles["badges-title"]}>Unlock badges for special achievements</h2>
             <div className={styles["badges-left-col"]}>
                 <p>Badges are special achievements you earn for participating on the site. They come in three levels: bronze, silver, and gold.</p>
@@ -17,12 +17,13 @@ function UnlockBadges() {
                     <table className={styles["badges-page"]}>
                         <tbody>
                             {badges.map(badge => (
-                                <tr key={badge.title}> {/* Add a unique key for each badge */}
+                                <tr key={badge.title}> 
                                     <td className={styles["badges-cell"]}>
-                                        <a title={badge.title} className={"badge"}>
+                                        <button title={badge.title} className={"badge"} >
+                                            <img src = {badge.img} alt="dot"/>
                                             <span className={styles["badge3"]}></span>
-                                            "&nbsp;{badge.text}"
-                                        </a>
+                                            &nbsp;{badge.text}
+                                        </button>
                                     </td>
                                     <td>{badge.td_context}</td>
                                 </tr>
