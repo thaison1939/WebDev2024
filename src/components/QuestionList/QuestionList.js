@@ -4,8 +4,8 @@ import styles from './QuestionList.module.scss'
 
 const QuestionList = ({ questions }) => {
     const [sortBy, setSortBy] = useState('hot');
-    const [currentPage, setCurrentPage] = useState(1); // State to manage current page
-    const [questionsPerPage, setQuestionsPerPage] = useState(15); // State for questions per page
+    const [currentPage, setCurrentPage] = useState(1);
+    const [questionsPerPage, setQuestionsPerPage] = useState(15);
 
     const sortedQuestions = [...questions].sort((a, b) => {
         if (sortBy === 'hot') {
@@ -15,13 +15,11 @@ const QuestionList = ({ questions }) => {
         }
     });
 
-    // Pagination logic
     const indexOfLastQuestion = currentPage * questionsPerPage;
     const indexOfFirstQuestion = indexOfLastQuestion - questionsPerPage;
     const currentQuestions = sortedQuestions.slice(indexOfFirstQuestion, indexOfLastQuestion);
     const totalPages = Math.ceil(sortedQuestions.length / questionsPerPage);
 
-    // Handlers for pagination
     const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
     const handlePerPageChange = (amount) => {
         setQuestionsPerPage(amount);
@@ -97,13 +95,12 @@ const QuestionList = ({ questions }) => {
                     )}
                 </div>
 
-                {/* Questions per page */}
                 <div className={styles.perPageOptions}>
                     {[15, 30, 50].map((amount) => (
                         <button
                             key={amount}
                             onClick={() => handlePerPageChange(amount)}
-                            className={`${styles.pageBtn} ${questionsPerPage === amount ? styles.active : ''}`}
+                            className={`${styles.perPageBtn} ${questionsPerPage === amount ? styles.active : ''}`}
                         >
                             {amount}
                         </button>
