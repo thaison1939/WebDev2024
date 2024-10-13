@@ -7,10 +7,10 @@ function NewUser() {
             <h2 className={styles["newuser-title"]}>Find a question to answer, or ask your own</h2>
             <div className={styles["huge-button"]}>
                 <button>
-                    <a className = {styles["user-button"]} href="https://stackexchange.com">Browse hot questions</a>
+                    <a className = {styles["user-button"]} href="#">Browse hot questions</a>
                 </button>
                 <button>
-                    <a className = {styles["user-button"]} href="https://stackexchange.com">See all sites</a>
+                    <a className = {styles["user-button"]} href="#">See all sites</a>
                 </button>
             </div>
         </div>
