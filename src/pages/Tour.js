@@ -30,7 +30,7 @@ const Tour = () => {
     const [tours, setTours] = useState([]);
 
     useEffect(() => {
-        const toursArray = Object.values(toursData); 
+        const toursArray = Object.values(toursData["tour"]); 
         setTours(toursArray); 
     }, []); 
 
