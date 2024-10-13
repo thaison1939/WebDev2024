@@ -4,6 +4,8 @@ import styles from './QuestionList.module.scss'
 
 const QuestionList = ({ questions }) => {
     const [sortBy, setSortBy] = useState('hot');
+    const [currentPage, setCurrentPage] = useState(1); // State to manage current page
+    const [questionsPerPage, setQuestionsPerPage] = useState(15); // State for questions per page
 
     const sortedQuestions = [...questions].sort((a, b) => {
         if (sortBy === 'hot') {
@@ -13,6 +15,19 @@ const QuestionList = ({ questions }) => {
         }
     });
 
+    // Pagination logic
+    const indexOfLastQuestion = currentPage * questionsPerPage;
+    const indexOfFirstQuestion = indexOfLastQuestion - questionsPerPage;
+    const currentQuestions = sortedQuestions.slice(indexOfFirstQuestion, indexOfLastQuestion);
+    const totalPages = Math.ceil(sortedQuestions.length / questionsPerPage);
+
+    // Handlers for pagination
+    const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
+    const handlePerPageChange = (amount) => {
+        setQuestionsPerPage(amount);
+        setCurrentPage(1);
+    };
+    
     return (
         <div className={styles.container}>
             <div className={styles["question-tab"]}>
@@ -31,9 +46,11 @@ const QuestionList = ({ questions }) => {
                     </a>
                 </div>
             </div>
+            
             <div className={styles["list-line"]}></div>
+
             <ul className={styles["question-list"]}>
-                {sortedQuestions.map((question, index) => (
+                {currentQuestions.map((question, index) => (
                     <li key={index} className={styles["question-list-item"]}>
                         <Question
                             image={question.image}
@@ -48,7 +65,52 @@ const QuestionList = ({ questions }) => {
                     </li>
                 ))}
             </ul>
-            <div className={styles["list-line"]}></div>
+
+            <div className={styles.pagination}>
+                <div className={styles.pageNumbers}>
+
+                    {currentPage > 1 && (
+                        <button
+                            onClick={() => handlePageChange(currentPage - 1)}
+                            className={styles.navBtn}
+                        >
+                            prev
+                        </button>
+                    )}
+
+                    {Array.from({ length: totalPages }, (_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => handlePageChange(i + 1)}
+                            className={`${styles.pageBtn} ${currentPage === i + 1 ? styles.active : ''}`}
+                        >
+                            {i + 1}
+                        </button>
+                    ))}
+                    {currentPage < totalPages && (
+                        <button
+                            onClick={() => handlePageChange(currentPage + 1)}
+                            className={styles.navBtn}
+                        >
+                            next
+                        </button>
+                    )}
+                </div>
+
+                {/* Questions per page */}
+                <div className={styles.perPageOptions}>
+                    {[15, 30, 50].map((amount) => (
+                        <button
+                            key={amount}
+                            onClick={() => handlePerPageChange(amount)}
+                            className={`${styles.pageBtn} ${questionsPerPage === amount ? styles.active : ''}`}
+                        >
+                            {amount}
+                        </button>
+                    ))}
+                    <span className={styles.perPageText}>per page</span>
+                </div>
+            </div> 
         </div>
     );
 };
