@@ -1,5 +1,6 @@
 {
-  "related_questions": {
+  "related_questions": [
+    {
     "questionId": "58b643bd-9260-4f87-89e6-3acb157e10bc",
     "questions": [
       {
@@ -52,6 +53,7 @@
         "upvote": 31,
         "title": "How to address past academic misconduct as a new faculty member?"
       }
-    ]
-  }
+      ]
+    }
+  ]
 }

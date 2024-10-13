@@ -19,46 +19,26 @@ const ThreadPost = ()  => {
 
     console.log("Post ID: ",id);
 
-    const post = questionData.questions.find((question) => question.id === id);
-    const voting = votingData.votings.find((voting) => voting.questionId === id);
-    const userInfo = userInfoData.users.find((userInfo) => userInfo.questionId === id);
-    const relatedQuestion = relatedQuestionData.questions.find((relatedQuestion) => relatedQuestion.questionId === id);
-    const widget = widgetData.widgets.find((widget) => widget.questionId === id);
-
-
-    if (questionData && questionData.questions) {
-        console.log("Finding question in questions array...");
-        const post = questionData.questions.find((question) => question.id === id);
-        console.log("Post found:", post);
-      } else {
-        console.error("Question data or questions array is missing.");
-      }
-      
-      if (votingData && votingData.votings) {
-        console.log("Finding voting data...");
-        const voting = votingData.votings.find((voting) => voting.questionId === id);
-        console.log("Voting data found:", voting);
-      } else {
-        console.error("Voting data or votings array is missing.");
-      }
-      
-      if (userInfoData && userInfoData.users) {
-        console.log("Finding user info data...");
-        const userInfo = userInfoData.users.find((userInfo) => userInfo.questionId === id);
-        console.log("User info data found:", userInfo);
-      } else {
-        console.error("User info data or users array is missing.");
-      }
+    const post = questionData?.questions?.find((question) => question.id === id);
+    const voting = votingData?.votings?.find((voting) => voting.questionId === id);
+    const userInfo = userInfoData?.users?.find((userInfo) => userInfo.questionId === id);
+    const relatedQuestion = relatedQuestionData?.related_questions?.find((relatedQuestion) => relatedQuestion.questionId === id);
+    const widget = widgetData?.widgets?.find((widget) => widget.questionId === id);
+    console.log("Post: ", post);
+    console.log("Voting: ", voting);
+    console.log("User Info: ", userInfo);
+    console.log("Related Question: ", relatedQuestion);
+    console.log("Widget: ", widget);
 
     if (!post) {
         return <h1>Sorry! Page was not found!</h1>
     }
 
     const { title, body, asked, modified, viewed} = post;
-    
     return (
         <div className={styles.ThreadPost}>
-            <div className={styles.leftSidebar}><LeftSideBar /></div>
+          {/* TODO: Fix params */}
+            {/* <div className={styles.leftSidebar}><LeftSideBar /></div> */}
             <div className={styles.title}>
                 <h1>{title}</h1>
                 <button className={styles.button}>Ask Question</button>
@@ -76,10 +56,11 @@ const ThreadPost = ()  => {
                     <p>{body}</p>
                     <UserInfo info={userInfo}/>
                 </div>
-
+                
                 <div className={styles.rightSidebar}>
-                    <SideBarWidget widget={widget}/>
-                    <Related relatedQuestions={relatedQuestion}/>
+                  {/* TODO: Fix params */}
+                    {/* <SideBarWidget widget={widget}/> */}
+                    <Related related_questions={relatedQuestion}/>
                 </div>
 
             </div>
