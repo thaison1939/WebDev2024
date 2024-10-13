@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef} from "react";
 import styles from './AskQuestion.module.scss';
 import arrowImage from '../../../assets/tour_assets/triangle.png';
 import tickImage from '../../../assets/tour_assets/correct.png';
@@ -7,8 +7,33 @@ import arrowDown from '../../../assets/tour_assets/orange-arrow.png';
 import rightTab from '../../../assets/tour_assets/askquestion.png';
 
 function AskQuestion() {
+    const [isVisible, setIsVisible] = useState(false);
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(containerRef.current);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => {
+            if (containerRef.current) {
+                observer.unobserve(containerRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <div className={styles["container"]}>
+        <div ref={containerRef} className={styles["container"]}>
             <h2 className={styles["title"]}>Ask questions, get answers, no distractions</h2>
 
             <div className={styles["panel-container"]}>
@@ -22,14 +47,14 @@ function AskQuestion() {
                     <div className={styles["justqa"]}>
                         <div className={styles["justquestions"]}>
                             <p>Just questions...</p>
-                            <div className={styles["arrow"]}>
+                            <div className={`${styles["arrow"]} ${isVisible ? styles["visible"] : ""}`}>
                                 <img src={arrowUp} alt="arrow-up"></img>
                             </div>
                         </div>
 
                         <div className={styles["andanswers"]}>
                             <p>... and answers.</p>
-                            <div className={styles["arrow"]}>
+                            <div className={`${styles["arrow"]} ${isVisible ? styles["visible"] : ""}`}>
                                 <img src={arrowDown} alt="arrow-down"></img>
                             </div>
                         </div>
@@ -61,7 +86,7 @@ function AskQuestion() {
                 </div>
 
                 <div className={styles["right-panel"]}>
-                    <img src={rightTab} alt="right-tab" className={styles["right-image"]}></img>
+                    <img src={rightTab} alt="right-tab" className={`${styles["right-image"]} ${isVisible ? styles["visible"] : ""}`} />
                 </div>
             </div>
         </div>
