@@ -1,5 +1,7 @@
 {
-    "related_questions": [
+  "related_questions": {
+    "questionId": "58b643bd-9260-4f87-89e6-3acb157e10bc",
+    "questions": [
       {
         "id": "40dfd884-22fc-4a2f-b4d3-9c8584deeb76",
         "upvote": 12,
@@ -52,4 +54,4 @@
       }
     ]
   }
-  
+}

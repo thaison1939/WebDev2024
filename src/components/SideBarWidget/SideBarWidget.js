@@ -1,7 +1,5 @@
 import React from "react";
-import styles from './SidebarWidget.module.scss';
-import WidgetContainer from "../WidgetContainer/WidgetContainer";
-import widgetData from "../../_SAMPLE_DATA/widgetData.json"
+import styles from './SideBarWidget.module.scss';
 
 const Widget = ({ title, widget_content }) => {
     return (
