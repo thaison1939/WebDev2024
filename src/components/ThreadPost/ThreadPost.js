@@ -27,7 +27,7 @@ const ThreadPost = ()  => {
         return <h1>Sorry! Page was not found!</h1>
     }
 
-    const { title, body, tags} = post;
+    const { title, body, tags, button } = post;
 
     const user = userInfo ? {
         time: userInfo.time,
@@ -45,16 +45,16 @@ const ThreadPost = ()  => {
 
     return (
         <div className={styles.ThreadPost}>
-            <div className={styles["thread-header"]}>
+            <div className={styles["threadHeader"]}>
                 <h1>{title}</h1>
-                <button className={styles["ask-question-button"]}>Ask Question</button>
+                <div className={styles["buttonContainer"]}>{button}</div>
             </div>
             
             <div className={styles.threadBody}>
                 {voting && <Voting {...vote}/>}
                 
                 {/*
-                TODO: Move this to postContent 
+                // TODO: Move this to postContent 
                     <div className={styles.time}>
                         <p>Asked<span>{asked}</span></p>
                         <p>Modified<span>{modified}</span></p>
@@ -73,9 +73,12 @@ const ThreadPost = ()  => {
                         </div>
                     </div> 
 
-                    <div className={styles["tags-user"]}>
+                    {/*
+                    // TODO: Modify user to appear according to thread ID
+                        <div className={styles["tags-user"]}>
                         {userInfo && <UserInfo {...user} />} 
-                    </div>
+                            </div>
+                            */}
                 </div>
             </div>
         </div>

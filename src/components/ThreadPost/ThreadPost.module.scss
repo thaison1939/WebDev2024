@@ -1,33 +1,33 @@
 // ThreadPost.module.scss
 .ThreadPost {
-  padding: 20px;
+    padding: 20px;
 
-  .thread-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
+    .threadHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
 
-      h1 {
-          font-size: 2rem;
-          font-weight: 600;
-          color: #3c3c3c;
-      }
+    h1 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #3c3c3c;
+    }
 
-      .ask-question-button {
-          background-color: #e36259;
-          color: white;
-          padding: 10px 15px;
-          border: none;
-          border-radius: 5px;
-          font-size: 1rem;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-
-          &:hover {
-              background-color: #d04d45;
-          }
-      }
+    .buttonContainer {
+        background-color: #e07c6a;
+        color: white;
+        border: none;
+        font-size: 12px;
+        width: 93px;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: #d06558;
+        }
+    }
   }
 
   .content {
@@ -35,87 +35,66 @@
   }
 
   .time {
-      display: flex;
-      gap: 10px;
-      font-size: 0.9rem;
-      color: #666;
+        display: flex;
+        gap: 10px;
+        font-size: 0.9rem;
+        color: #666;
 
-      span {
-          margin-left: 5px;
-          font-weight: bold;
-      }
+        span {
+            margin-left: 5px;
+            font-weight: bold;
+        }
     }
    
     .threadBody {
-      display: flex;
-      align-items: flex-start; 
+        display: flex;
+        align-items: flex-start; 
 
-      .voting-container {
-          margin-right: 20px; 
-      }
+        .voting-container {
+            margin-right: 20px; 
+        }
 
-      .content {
-          flex-grow: 1;
-          background-color: #f9f9f9;
-          padding: 20px;
-          border-radius: 8px;
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            border-radius: 8px;
 
-          .time {
-              display: flex;
-              gap: 10px;
-              font-size: 0.9rem;
-              color: #666;
+            .time {
+                display: flex;
+                gap: 10px;
+                font-size: 0.9rem;
 
               span {
                   margin-left: 5px;
                   font-weight: bold;
               }
-          }
+            }
 
-          p {
-              margin-top: 10px;
-              font-size: 1rem;
-              line-height: 1.6;
-              color: #333;
-          }
+            p {
+                margin-top: 10px;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
 
-          .startingLine {
-            display: flex;
-            justify-content: flex-start;   
-
-              .tag {
+            .startingLine {
                 display: flex;
-                justify-content: space-between;
-              }
-          }
-      }
-  }
+                justify-content: flex-start;   
 
-  .tags-user {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 15px;
-      padding-top: 15px;
-      border-top: 1px solid #ddd;
+                .tag {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
 
-      .tag-component {
-          display: flex;
-          gap: 5px;
-      }
+    .tags-user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #ddd;
 
-      .user-info {
-          display: flex;
-          align-items: center;
-
-          img {
-              margin-right: 10px;
-          }
-
-          .repu-score {
-              display: flex;
-              gap: 5px;
-          }
-      }
-  } 
+    } 
 }

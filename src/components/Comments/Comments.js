@@ -11,7 +11,7 @@ const Comments = ({ comments, threadId }) => {
                     <div className={styles.upvote}>{comment.upvote}</div>
                     <div className={styles.text}>
                         <p>{comment.text}</p>
-                        <div className={styles.meta}>
+                        <div className={styles.inline}>
                             <span className={styles.author}>{comment.author}</span> 
                             <span className={styles.date}>{comment.date}</span>
                         </div>

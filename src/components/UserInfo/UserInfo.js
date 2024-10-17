@@ -6,24 +6,23 @@ import bronzeIcon from '../../assets/bronze.png';
 
 const UserInfo = ({ time, avatar, username, icon, reputation, badges }) => {
     return (
-        <div className={styles["user-info"]}>
-            <div className={styles["time"]}>
-                <a href="#" className={styles["blue-text"]}>{time}</a>
+        <div className={styles.userInfo}>
+            <div className={styles.time}>
+                <a href="#" className={styles.blueText}>{time}</a>
+                <img src={avatar} alt={`${username}'s avatar`} className={styles.avatar}></img>
             </div>
 
-            <img src={avatar} alt={`${username}'s avatar`} className={styles.avatar}></img>
-
-            <div className={styles["author-info"]}>
-                <div className={styles["author"]}>
+            <div className={styles.authorInfo}>
+                <div className={styles.author}>
                     <a href="">{username}</a>
-                    <span>{icon}</span> 
+                    <span>{icon}</span>
                 </div>
 
-                <div className={styles["repu-score"]}>
+                <div className={styles.repuScore}>
                     <p>{reputation}</p>
 
                     {badges && (
-                        <div className={styles["badges"]}>
+                        <div className={styles.badges}>
                             {badges.gold > 0 && (
                                 <>
                                     <img src={goldIcon} alt="gold badge" />

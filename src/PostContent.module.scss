@@ -6,7 +6,7 @@
     .wrapper {
         display: flex;
         flex-direction: row;
-        margin-top: 60px;
+        margin-top: 5px;
     }
 
     .navbar {
@@ -22,17 +22,16 @@
     .leftSidebar {
         width: 164px;
         position: sticky;
-        top: 60px;
+        top: 20px;
         height: 100vh;
         padding: 10px 0;
         background-color: #fbf8f3;
-        left: 12%;
+        left: 14.8%;
     }
 
     .mainContent {
         background-color: white;
         display: flex;
-        flex-grow: 1;
         gap: 20px;
         max-width: 1100px;
         margin: 0 auto;
@@ -57,30 +56,22 @@
     }
 
     .body {
-        flex-grow: 1;
         max-width: 800px;
     }
 
-    /* Header style */
-    .thread-header {
+    .title-button-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 0;
-
-        h1 {
+        margin-bottom: 20px; 
+    
+        .post-title {
             font-size: 27px;
             font-weight: normal;
-            margin-right: auto;
+            margin: 0;
         }
-
-        .ask-question-button {
-            background-color: #f48024;
-            border: none;
-            color: white;
-            font-size: 14px;
-            padding: 8px 12px;
-            border-radius: 3px;
+    
+        .askButton {
             margin-left: auto;
         }
     }

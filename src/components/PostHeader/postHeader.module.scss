@@ -1,21 +1,16 @@
 .header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between; 
     align-items: center;
-    background-color: #fbf8f3; 
+    background-color: #fbf8f3;
+    padding: 10px 16% 0px; 
 
     .logo {
         height: 40px;
         margin-top: 5px;
-        left: 12%;
-    }
-
-    .hidden {
-        visibility: hidden;
     }
 
     .additionalImage {
         height: 60px;
-        margin-left: auto;
     }
 }

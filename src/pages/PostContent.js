@@ -5,14 +5,16 @@ import PostHeader from '../components/PostHeader/postHeader';
 import styles from '../PostContent.module.scss';
 import LeftSideBar from '../components/LeftSideBar/LeftSideBar';  
 import SideBarWidget from '../components/SideBarWidget/SideBarWidget'; 
+import Comments from '../components/Comments/Comments';
 import Related from '../components/Related/Related';  
 import relatedQuestionsData from '../_SAMPLE_DATA/relatedQuestions.json';
 import sideBarWidgetData from '../_SAMPLE_DATA/widget.json';
 import leftSideBarData from '../_SAMPLE_DATA/leftSideBar.json';
 import postHeaderData from '../_SAMPLE_DATA/postHeader.json';
-import commentData from '../_SAMPLE_DATA/comments.json';
+import commentsData from '../_SAMPLE_DATA/comments.json';
 import { useParams } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
+
 
 const PostContent = ({ threadId }) => {
     const { id } = useParams();
@@ -61,12 +63,19 @@ const PostContent = ({ threadId }) => {
 
                 <div className={styles.mainContent}>
                     <div className={styles.content}>
-                        {threadPostData.posts.map((post) => (
+                        {threadPostData.posts.map((post, index) => (
                             <div key={post.id} className={styles.body}>
-                                <ThreadPost  
-                                    title={post.title}
-                                    body={post.body}
-                                />
+
+
+                <ThreadPost  
+                  title={index === 0 ? post.title : undefined}  
+                  body={post.body}
+                  button={index === 0 ? (
+                    <button className={styles.askButton}>Ask Question</button>
+                  ) : null}
+                />
+
+                <Comments comments={commentsData.comments} threadId={post.id} />
                             </div>
                         ))}
                     </div>
