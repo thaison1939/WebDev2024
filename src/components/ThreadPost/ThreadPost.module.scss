@@ -1,21 +1,121 @@
+// ThreadPost.module.scss
 .ThreadPost {
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    height: 100vh;
+  padding: 20px;
 
-    .leftSidebar {
-        position: sticky;
-        flex: 0 0 160px;
-        height: 45vh;
-    }
+  .thread-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
 
-    .rightSidebar {
-        position: sticky;
-        flex: 0 0 300px;
-    }
+      h1 {
+          font-size: 2rem;
+          font-weight: 600;
+          color: #3c3c3c;
+      }
 
-    .content{
-        flex: 1;
+      .ask-question-button {
+          background-color: #e36259;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 5px;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+              background-color: #d04d45;
+          }
+      }
+  }
+
+  .content {
+      // Style for the rest of the content
+  }
+
+  .time {
+      display: flex;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: #666;
+
+      span {
+          margin-left: 5px;
+          font-weight: bold;
+      }
     }
+   
+    .threadBody {
+      display: flex;
+      align-items: flex-start; 
+
+      .voting-container {
+          margin-right: 20px; 
+      }
+
+      .content {
+          flex-grow: 1;
+          background-color: #f9f9f9;
+          padding: 20px;
+          border-radius: 8px;
+
+          .time {
+              display: flex;
+              gap: 10px;
+              font-size: 0.9rem;
+              color: #666;
+
+              span {
+                  margin-left: 5px;
+                  font-weight: bold;
+              }
+          }
+
+          p {
+              margin-top: 10px;
+              font-size: 1rem;
+              line-height: 1.6;
+              color: #333;
+          }
+
+          .startingLine {
+            display: flex;
+            justify-content: flex-start;   
+
+              .tag {
+                display: flex;
+                justify-content: space-between;
+              }
+          }
+      }
+  }
+
+  .tags-user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+
+      .tag-component {
+          display: flex;
+          gap: 5px;
+      }
+
+      .user-info {
+          display: flex;
+          align-items: center;
+
+          img {
+              margin-right: 10px;
+          }
+
+          .repu-score {
+              display: flex;
+              gap: 5px;
+          }
+      }
+  } 
 }

@@ -1,3 +1,32 @@
 .voting-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; 
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+
+    .voting-icon {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        margin-bottom: 12px;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .upvote-count {
+        margin: 12px 0;
+        font-weight: bold;
+        color: black;
+    }
+
+    .save-icon, .history-icon {
+        margin-top: 10px;
+    }
 }

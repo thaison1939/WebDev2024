@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fbf8f3; 
+
+    .logo {
+        height: 40px;
+        margin-top: 5px;
+        left: 12%;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    .additionalImage {
+        height: 60px;
+        margin-left: auto;
+    }
+}

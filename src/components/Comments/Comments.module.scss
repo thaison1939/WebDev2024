@@ -1,3 +1,50 @@
+.comments {
+    margin-top: 20px;
+}
+
 .comment {
-    display: grid;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+    .upvote {
+        color: #f48024;
+        font-size: 16px;
+        font-weight: bold;
+        min-width: 25px;
+        text-align: right;
+        margin-right: 10px;
+    }
+
+    .text {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 4px;
+        flex-grow: 1;
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .meta {
+            margin-top: 5px;
+            font-size: 12px;
+            color: #6a737c;
+
+            .author {
+                color: #0077cc;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .date {
+                margin-left: 5px;
+            }
+        }
+    }
 }

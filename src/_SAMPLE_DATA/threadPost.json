@@ -1,21 +1,13 @@
-[
-    {
-      "id": "58b643bd-9260-4f87-89e6-3acb157e10bc",
-      "title": "Is it ethical to make money off your own lecture notes?",
-      "body": [
-        "Recently, a non-tenured professor was fired by a small regional university. While several reasons were given, I find the main reasons questionable and want to check them against generally accepted norms:",
-        {
-          "type": "list",
-          "items": [
-            "\t\nThe professor published his own lecture notes online, and at the bottom of each page, there was a \"Buy me a coffee\" link that allowed users to donate money directly to him. This link only appeared on the notes he made available through his professional website hosted on GitHub. He also had a version uploaded to the university's e-learning system, where students could download the PDF version without seeing the donation link.",
-            "\t\nThe professor published YouTube videos in which he read his own lectures with some animations and illustrations. He monetized these videos and received profit.",
-            "\t\nThe professor published several technical reports that summarized long and technical papers, as well as famous but complicated experiments, in a form that was understandable for students. These were also published on his professional site with the \"Buy me a coffee\" link."
-          ]
-        },
-        "\nOver the last few years, the professor made a small amount of money through these three sources. The university ruled that this broke the ethical code, even though there were no explicit clauses in the faculty handbook addressing these actions.\nMy question is: Regardless of the university's perspective, do any of these actions break the generally accepted ethical code?"
-      ],
-      "asked": "2 days ago",
-      "modified": "today",
-      "viewed": "6k times"
-    }
-]
+{
+  "posts": 
+    [
+      {
+        "id": "58b643bd-9260-4f87-89e6-3acb157e10bc",
+        "title": "Is it ethical to make money off your own lecture notes?",
+        "body": "Lorem ipsum odor amet, consectetuer adipiscing elit. Aliquam ipsum vulputate vel tortor class blandit. Ridiculus bibendum proin in eget ut fermentum ad. Bibendum lobortis habitant vel luctus dapibus. Est aenean eros egestas sed quisque ut dictum consequat. Sociosqu sodales vehicula ac ligula vitae viverra placerat. Magna leo praesent luctus nibh hac mollis suspendisse hac efficitur. Mus ridiculus amet facilisis gravida condimentum scelerisque.\nAenean consectetur maecenas rhoncus placerat feugiat fermentum aliquet. Eget maximus penatibus erat elementum mattis tempus rutrum class. Pharetra in penatibus at pellentesque tristique hac. Etiam a ipsum porttitor tincidunt sagittis praesent ipsum condimentum dictum. Natoque mus viverra feugiat turpis platea tristique tincidunt. Interdum venenatis lacus pretium risus vehicula. Maximus nulla id dolor; condimentum pellentesque magna. Senectus pellentesque egestas cras pharetra tempor?",
+        "asked": "2 days ago",
+        "modified": "today",
+        "viewed": "6k times"
+      }
+    ]
+}

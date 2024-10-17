@@ -1,13 +1,32 @@
 import React from 'react';
 import styles from './LeftSideBar.module.scss'
+import homeIcon from '../../assets/home.png';
+import questionIcon from '../../assets/questionIcon.png';
+import tagIcon from '../../assets/tag.png';
+import companionIcon from '../../assets/companion.png';
+import answerIcon from '../../assets/answerIcon.png';
+import overflowAiIcon from '../../assets/Overflow-AI.png';
 
-const leftSideBar = ({ channels, img, alt }) => {
+
+const leftSideBar = ({ content }) => {
+
+    const { channels, img, alt } = content;   
+    
+    const imgMapping = {
+        homeIcon,
+        questionIcon,
+        tagIcon,
+        companionIcon,
+        answerIcon,
+        overflowAiIcon
+    };
+
     return (
         <div className={styles["leftSideBar"]}>
                 {channels.map((channel, index) => (
                     <div key={index}>
                         <div className={styles["channelName"]}>
-                            <img src={channel.img} alt={channel.alt} className={styles["icon"]}/>
+                            <img src={imgMapping[channel.img]} alt={channel.alt} className={styles["icon"]}/>
                             <span className={styles["channel"]}>{channel.name}</span>
                         </div>
 
@@ -17,7 +36,7 @@ const leftSideBar = ({ channels, img, alt }) => {
 
             <div className={styles.team}>
                 <div className={styles["bold-text"]}>TEAMS</div>
-                <img src={img} alt={alt}></img>
+                <img src={imgMapping[img]} alt={alt}></img>
                 <p><span className={styles["bold"]}>Now available on Stack Overflow for Teams!</span> AI features where you work: search, IDE, and chat.</p>
                 <button className={styles["orangebtn"]}>Learn more</button>
                 <a href="">Explore Teams</a>

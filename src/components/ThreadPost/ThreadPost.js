@@ -4,14 +4,13 @@ import Related from '../Related/Related';
 import Voting from '../Voting/Voting';
 import UserInfo from '../UserInfo/UserInfo';
 import { useParams } from 'react-router-dom';
-import SideBarWidget from '../SideBarWidget/SideBarWidget';
 import styles from './ThreadPost.module.scss';
 
+import Tag from '../Tag/Tag';
 import questionData from '../../_SAMPLE_DATA/questions.json';
 import votingData from '../../_SAMPLE_DATA/voting.json';
 import userInfoData from '../../_SAMPLE_DATA/userInfo.json';
-import widgetData from '../../_SAMPLE_DATA/widget.json';
-import relatedQuestionData from '../../_SAMPLE_DATA/relatedQuestions.json';
+import postData from '../../_SAMPLE_DATA/threadPost.json';
 
 const ThreadPost = ()  => {
 
@@ -19,50 +18,65 @@ const ThreadPost = ()  => {
 
     console.log("Post ID: ",id);
 
-    const post = questionData?.questions?.find((question) => question.id === id);
-    const voting = votingData?.votings?.find((voting) => voting.questionId === id);
-    const userInfo = userInfoData?.users?.find((userInfo) => userInfo.questionId === id);
-    const relatedQuestion = relatedQuestionData?.related_questions?.find((relatedQuestion) => relatedQuestion.questionId === id);
-    const widget = widgetData?.widgets?.find((widget) => widget.questionId === id);
-    console.log("Post: ", post);
-    console.log("Voting: ", voting);
-    console.log("User Info: ", userInfo);
-    console.log("Related Question: ", relatedQuestion);
-    console.log("Widget: ", widget);
+    const question = questionData.questions.find((question) => question.id === id);
+    const voting = votingData.votings.find((voting) => voting.questionId === id);
+    const userInfo = userInfoData.users.find((userInfo) => userInfo.questionId === id);
+    const post = postData.posts.find((post) => post.id === id);
 
-    if (!post) {
+    if (!post && !question) {
         return <h1>Sorry! Page was not found!</h1>
     }
 
-    const { title, body, asked, modified, viewed} = post;
+    const { title, body, tags} = post;
+
+    const user = userInfo ? {
+        time: userInfo.time,
+        username: userInfo.username,
+        avatar: userInfo.avatar,
+        reputation: userInfo.reputation,
+        badges: userInfo.badges,
+        icon: userInfo.icon,
+    } : {};
+
+    const vote = voting ? {
+        upvote: voting.upvote
+    } : {};
+
+
     return (
         <div className={styles.ThreadPost}>
-          {/* TODO: Fix params */}
-            {/* <div className={styles.leftSidebar}><LeftSideBar /></div> */}
-            <div className={styles.title}>
+            <div className={styles["thread-header"]}>
                 <h1>{title}</h1>
-                <button className={styles.button}>Ask Question</button>
+                <button className={styles["ask-question-button"]}>Ask Question</button>
             </div>
-
-            <div className={styles.content}>
-                <div className={styles.time}>
-                    <p>Asked<span>{asked}</span></p>
-                    <p>Modified<span>{modified}</span></p>
-                    <p>Viewed<span>{viewed}</span></p>
-                </div>
-
-                <div>
-                    <Voting votes={voting}/>
-                    <p>{body}</p>
-                    <UserInfo info={userInfo}/>
-                </div>
+            
+            <div className={styles.threadBody}>
+                {voting && <Voting {...vote}/>}
                 
-                <div className={styles.rightSidebar}>
-                  {/* TODO: Fix params */}
-                    {/* <SideBarWidget widget={widget}/> */}
-                    <Related related_questions={relatedQuestion}/>
-                </div>
+                {/*
+                TODO: Move this to postContent 
+                    <div className={styles.time}>
+                        <p>Asked<span>{asked}</span></p>
+                        <p>Modified<span>{modified}</span></p>
+                        <p>Viewed<span>{viewed}</span></p>
+                    </div>
+                */}
 
+                <div className={styles.content}>
+                    <p>{body}</p>
+
+                    <div className={styles.startingLine}>
+                        <div className={styles.tag}>
+                            {tags && tags.map((tag, index) => (
+                                <Tag key={index} tagName={tag}/> 
+                            ))}
+                        </div>
+                    </div> 
+
+                    <div className={styles["tags-user"]}>
+                        {userInfo && <UserInfo {...user} />} 
+                    </div>
+                </div>
             </div>
         </div>
     );

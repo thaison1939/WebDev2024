@@ -1,3 +1,89 @@
 .user-info {
     display: flex;
+    flex-direction: column;
+    background-color: #f1f4f6;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    align-items: flex-start;
+
+    .time {
+        margin-bottom: 5px;
+        font-size: 0.75rem;
+        color: #6a737c;
+        margin-left: 8px;  /* Ensures it aligns with the avatar */
+
+        .blue-text {
+            color: #58a4de;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 3px;
+        margin-right: 10px;
+    }
+
+    .author-info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 58px;
+
+        .author {
+            display: flex;
+            align-items: center;
+
+            a {
+                color: #0077cc;
+                font-weight: 500;
+                margin-right: 5px;
+                text-decoration: none;
+                font-size: 14px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            span {
+                color: #ffc107;
+                margin-left: 5px;
+            }
+        }
+
+        .repu-score {
+            display: flex;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #6a737c;
+
+            p {
+                margin-right: 5px;
+                font-weight: bold;
+                color: #3b4045;
+            }
+
+            .badges {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 2px;
+                }
+
+                p {
+                    margin-right: 5px;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
 }
