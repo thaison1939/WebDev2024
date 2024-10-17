@@ -1,21 +1,100 @@
+// ThreadPost.module.scss
 .ThreadPost {
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    height: 100vh;
+    padding: 20px;
 
-    .leftSidebar {
-        position: sticky;
-        flex: 0 0 160px;
-        height: 45vh;
+    .threadHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #3c3c3c;
     }
 
-    .rightSidebar {
-        position: sticky;
-        flex: 0 0 300px;
+    .buttonContainer {
+        background-color: #e07c6a;
+        color: white;
+        border: none;
+        font-size: 12px;
+        width: 93px;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: #d06558;
+        }
+    }
+  }
+
+  .content {
+      // Style for the rest of the content
+  }
+
+  .time {
+        display: flex;
+        gap: 10px;
+        font-size: 0.9rem;
+        color: #666;
+
+        span {
+            margin-left: 5px;
+            font-weight: bold;
+        }
+    }
+   
+    .threadBody {
+        display: flex;
+        align-items: flex-start; 
+
+        .voting-container {
+            margin-right: 20px; 
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            border-radius: 8px;
+
+            .time {
+                display: flex;
+                gap: 10px;
+                font-size: 0.9rem;
+
+              span {
+                  margin-left: 5px;
+                  font-weight: bold;
+              }
+            }
+
+            p {
+                margin-top: 10px;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .startingLine {
+                display: flex;
+                justify-content: flex-start;   
+
+                .tag {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
     }
 
-    .content{
-        flex: 1;
-    }
+    .tags-user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #ddd;
+
+    } 
 }

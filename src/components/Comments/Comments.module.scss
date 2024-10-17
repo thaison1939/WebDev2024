@@ -1,3 +1,59 @@
+.comments {
+    margin-top: 4px;
+    margin-left: 10%;
+}
+
 .comment {
-    display: grid;
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+
+    .upvote {
+        color: #f48023;
+        font-size: 13px;
+        font-weight: bold;
+        min-width: 19px;
+        text-align: right;
+        margin-right: 7px;
+    }
+
+    .text {
+        padding: 7px;
+        border-radius: 3px;
+        flex-grow: 1;
+        white-space: normal; 
+        word-wrap: break-word;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+            margin: 0;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        .inline {
+            font-size: 12px;
+
+            .author {
+                color: #0076cc;
+                text-decoration: none;
+                margin-left: 5px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .date {
+                margin-left: 5px;
+                color: #6a737c;
+            }
+
+            .inline {
+                display: inline;
+            }
+        }
+    }
 }

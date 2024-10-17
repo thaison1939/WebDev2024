@@ -1,3 +1,36 @@
 .widget {
-    display: flex;
+    background-color: #fff8dc;
+    border: 1px solid #f2e7c1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    .title {
+        font-weight: bold;
+        color: #444;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .widget-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .text {
+            color: #444;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+    }
 }

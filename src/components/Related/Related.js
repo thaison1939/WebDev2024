@@ -1,8 +1,8 @@
 import React from "react";
 import styles from './Related.module.scss';
 
-const Related = ({ related_questions }) => {
-    const questions = related_questions.questions;
+const Related = ({ relatedQuestions }) => {
+    const questions = relatedQuestions?.questions || [] ;
 
     return (
         <div className={styles["sidebar-related"]}>

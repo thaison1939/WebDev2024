@@ -1,3 +1,94 @@
-.user-info {
-    display: flex;
+/*userInfo {
+    display: grid;
+    grid-template-rows: 30px 40px; 
+    grid-template-columns: 45px 1fr;
+    align-items: center;
+    font-size: 0.9rem;
+
+    .time {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+
+        .blueText {
+            color: #58a4de;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .avatar {
+        grid-row: 2; 
+        width: 40px;
+        height: 40px;
+        border-radius: 10%;
+    }
+
+    .authorInfo {
+        display: grid;
+        grid-column: 2;
+        grid-row: 2;
+        justify-content: center;
+        margin-bottom: 0;
+
+        .author {
+            display: flex;
+            align-items: center;
+
+            a {
+                grid-column: 2;
+                grid-row: 2;
+                color: #0077cc;
+                font-weight: 600;
+                margin-right: 5px;
+                align-self: end;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            span {
+                color: #ffc107; 
+            }
+        }
+
+        .repuScore {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            p {
+                top: 10px;
+                margin-right: 8px;
+                font-weight: 600;
+                font-size: 16px;
+                color: #333;
+            }
+
+            .badges {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                img {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 3px;
+                    margin-bottom: 7px;
+                }
+
+                p {
+                    margin-right: 10px;
+                    font-size: 0.85rem;
+                    color: #666;
+                }
+            }
+        }
+    }
 }
+*/

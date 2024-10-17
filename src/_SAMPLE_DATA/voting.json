@@ -2,12 +2,7 @@
     "votings": [
         {
             "questionId": "58b643bd-9260-4f87-89e6-3acb157e10bc",
-            "id": "6ff5dd50-1162-464b-8dc8-08f60c8e7bc9",
-            "upvoteImg": "../../upvote.png",
-            "upvote": "28",
-            "downvoteImg": "../../downvote.png",
-            "saveImg": "../../bookmark.png",
-            "historyImg": "../../log_history.png"
+            "upvote": "28"
         }
     ]
 }
