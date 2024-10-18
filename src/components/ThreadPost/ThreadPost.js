@@ -11,12 +11,11 @@ import questionData from '../../_SAMPLE_DATA/questions.json';
 import votingData from '../../_SAMPLE_DATA/voting.json';
 import userInfoData from '../../_SAMPLE_DATA/userInfo.json';
 import postData from '../../_SAMPLE_DATA/threadPost.json';
+import tagData from '../../_SAMPLE_DATA/tagName.json';
 
 const ThreadPost = ()  => {
 
     const { id } = useParams();
-
-    console.log("Post ID: ",id);
 
     const question = questionData.questions.find((question) => question.id === id);
     const voting = votingData.votings.find((voting) => voting.questionId === id);
@@ -27,7 +26,7 @@ const ThreadPost = ()  => {
         return <h1>Sorry! Page was not found!</h1>
     }
 
-    const { title, body, tags, button } = post;
+    const { title, body, asked, modified, viewed } = post;
 
     const user = userInfo ? {
         time: userInfo.time,
@@ -45,40 +44,39 @@ const ThreadPost = ()  => {
 
     return (
         <div className={styles.ThreadPost}>
-            <div className={styles["threadHeader"]}>
-                <h1>{title}</h1>
-                <div className={styles["buttonContainer"]}>{button}</div>
-            </div>
+            { title && (
+                <div className={styles["threadHeader"]}>
+                    <h1>{title}</h1>
+                </div>
+            )}
+
+            { asked && modified && viewed && (
+                <div className={styles.time}>
+                    <p>Asked<span>{asked}</span></p>
+                    <p>Modified<span>{modified}</span></p>
+                    <p>Viewed<span>{viewed}</span></p>
+                </div>
+            )}
             
             <div className={styles.threadBody}>
                 {voting && <Voting {...vote}/>}
                 
-                {/*
-                // TODO: Move this to postContent 
-                    <div className={styles.time}>
-                        <p>Asked<span>{asked}</span></p>
-                        <p>Modified<span>{modified}</span></p>
-                        <p>Viewed<span>{viewed}</span></p>
-                    </div>
-                */}
-
                 <div className={styles.content}>
                     <p>{body}</p>
 
-                    <div className={styles.startingLine}>
-                        <div className={styles.tag}>
-                            {tags && tags.map((tag, index) => (
-                                <Tag key={index} tagName={tag}/> 
-                            ))}
-                        </div>
-                    </div> 
-
-                    {/*
-                    // TODO: Modify user to appear according to thread ID
-                        <div className={styles["tags-user"]}>
-                        {userInfo && <UserInfo {...user} />} 
+                    { tagData.tags && (
+                        <div className={styles.startingLine}>
+                            <div className={styles.tag}>
+                                {tagData.tags && tagData.tags.map((tag, index) => (
+                                    <Tag key={index} name_tag={tag}/> 
+                                ))}
                             </div>
-                            */}
+                        </div> 
+                    )}
+                
+                    <div className={styles["tags-user"]}>
+                        {userInfo && <UserInfo {...user} />} 
+                    </div>
                 </div>
             </div>
         </div>

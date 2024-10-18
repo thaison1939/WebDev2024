@@ -1,18 +1,18 @@
-.voting-container {
+.votingContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 20px; 
-    font-family: Arial, sans-serif;
+    gap: 8px;
     font-size: 18px;
     color: #333;
+    margin-top: 20px;
 
-    .voting-icon {
-        width: 32px;
-        height: 32px;
+    .votingIcon {
+        width: 35px;
+        height: 35px;
         cursor: pointer;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         opacity: 0.8;
 
         &:hover {
@@ -21,12 +21,14 @@
     }
 
     .upvote-count {
-        margin: 12px 0;
+        margin-bottom: 5px;
         font-weight: bold;
         color: black;
     }
 
-    .save-icon, .history-icon {
-        margin-top: 10px;
+    .bookmarkIcon {
+        margin-top: 13px;
+        width: 22px;
+        height: 22px;
     }
 }

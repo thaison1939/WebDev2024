@@ -1,16 +1,21 @@
-/*userInfo {
-    display: grid;
-    grid-template-rows: 30px 40px; 
-    grid-template-columns: 45px 1fr;
-    align-items: center;
-    font-size: 0.9rem;
+.userInfo {
+    display: block;
+    margin-top: 15px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 230px;
 
     .time {
-        grid-column: 1 / span 2;
-        grid-row: 1;
+        text-align: left;
+        margin-left: 5px;
+        margin-bottom: 6px;
 
         .blueText {
-            color: #58a4de;
+            color: #0077cc;
+            font-size: 12px;
             text-decoration: none;
 
             &:hover {
@@ -19,76 +24,68 @@
         }
     }
 
-    .avatar {
-        grid-row: 2; 
-        width: 40px;
-        height: 40px;
-        border-radius: 10%;
-    }
+    .userDetails {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px; 
 
-    .authorInfo {
-        display: grid;
-        grid-column: 2;
-        grid-row: 2;
-        justify-content: center;
-        margin-bottom: 0;
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 20%;
+        }
 
-        .author {
+        .info {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin: 5px 0px;
 
             a {
-                grid-column: 2;
-                grid-row: 2;
+                font-size: 13px;
+                font-weight: bold;
                 color: #0077cc;
-                font-weight: 600;
-                margin-right: 5px;
-                align-self: end;
                 text-decoration: none;
+                margin-bottom: 3px;
 
                 &:hover {
                     text-decoration: underline;
                 }
             }
 
-            span {
-                color: #ffc107; 
-            }
-        }
-
-        .repuScore {
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-
-            p {
-                top: 10px;
-                margin-right: 8px;
-                font-weight: 600;
-                font-size: 16px;
-                color: #333;
-            }
-
-            .badges {
+            .repuScore {
                 display: flex;
-                justify-content: space-evenly;
                 align-items: center;
-
-                img {
-                    width: 16px;
-                    height: 16px;
-                    margin-right: 3px;
-                    margin-bottom: 7px;
-                }
+                gap: 5px;
+                margin-bottom: 5px;
 
                 p {
-                    margin-right: 10px;
-                    font-size: 0.85rem;
-                    color: #666;
+                    font-size: 12px;
+                    font-weight: bold;
+                    white-space: nowrap;
+                }
+
+                .badges {
+                    display: flex;
+                    gap: 5px;
+
+                    .badge {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        p {
+                            font-size: 12px;
+                            color: #666;
+                            margin-left: 3px;
+                        }
+                    }
                 }
             }
         }
     }
 }
-*/

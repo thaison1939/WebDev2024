@@ -9,9 +9,9 @@ const Related = ({ relatedQuestions }) => {
             <h4>Related</h4>
             {questions.map((question, index) => (  
                 <div key={index}>
-                    <div className={styles["question"]}>
+                    <div className={styles.question}>
                         <a href={`/questions/${question.id}`} className={styles["votes"]}>{question.upvote}</a>
-                        <a href={`/questions/${question.id}`} className={styles["blue-text"]}>{question.title}</a>
+                        <a href={`/questions/${question.id}`} className={styles["blueText"]}>{question.title}</a>
                     </div>
                 </div>
             ))}

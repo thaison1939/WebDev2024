@@ -10,11 +10,9 @@ const Comments = ({ comments, threadId }) => {
                 <div key={comment.id} className={styles.comment}>
                     <div className={styles.upvote}>{comment.upvote}</div>
                     <div className={styles.text}>
-                        <p>{comment.text}</p>
-                        <div className={styles.inline}>
-                            <span className={styles.author}>{comment.author}</span> 
-                            <span className={styles.date}>{comment.date}</span>
-                        </div>
+                        <p>{comment.text}</p> 
+                        <span className={styles.author}>- {comment.author}</span> 
+                        <span className={styles.date}> {comment.date}</span>
                     </div>
                 </div>
             ))}

@@ -10,23 +10,21 @@
     }
 
     .navbar {
-        padding-top: 20px;
         position: fixed;
         width: 100%;
         top: 0;
         left: 0;
         z-index: 1000;
-        height: 50px;
     }
 
     .leftSidebar {
         width: 164px;
         position: sticky;
-        top: 20px;
+        top: 0;
         height: 100vh;
-        padding: 10px 0;
+        margin: 10px 0;
         background-color: #fbf8f3;
-        left: 14.8%;
+        left: 10.3%;
     }
 
     .mainContent {
@@ -52,17 +50,18 @@
         flex-direction: column;
         margin-right: 20px;
         height: auto;
-        margin-top: 14.5%;
+        margin-top: 10.5%;
     }
 
     .body {
         max-width: 800px;
     }
 
-    .title-button-container {
+    .askButton {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-left: auto;
         margin-bottom: 20px; 
     
         .post-title {
