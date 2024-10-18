@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #fbf8f3;
+    padding: 10px 11.8% 0px; 
+
+    .logo {
+        height: 40px;
+        margin-top: 5px;
+    }
+
+    .additionalImage {
+        height: 60px;
+    }
+}
