@@ -68,7 +68,7 @@ const ThreadPost = ()  => {
                         <div className={styles.startingLine}>
                             <div className={styles.tag}>
                                 {tagData.tags && tagData.tags.map((tag, index) => (
-                                    <Tag key={index} name_tag={tag}/> 
+                                    <Tag key={index} nameTag={tag}/> 
                                 ))}
                             </div>
                         </div> 

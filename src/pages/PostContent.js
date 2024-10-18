@@ -2,7 +2,7 @@ import React from 'react';
 import ThreadPost from '../components/ThreadPost/ThreadPost';
 import threadPostData from '../_SAMPLE_DATA/threadPost.json';
 import PostHeader from '../components/PostHeader/postHeader';
-import styles from '../PostContent.module.scss';
+import styles from './PostContent.module.scss';
 import LeftSideBar from '../components/LeftSideBar/LeftSideBar';  
 import SideBarWidget from '../components/SideBarWidget/SideBarWidget'; 
 import Comments from '../components/Comments/Comments';
