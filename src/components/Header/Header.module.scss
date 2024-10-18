@@ -1,0 +1,34 @@
+.site-header {               
+    height: 110px;
+}
+
+.site-header h1 {
+    background: transparent url(http://localhost:3000/ue-logo.png) no-repeat left top;
+    display: block;
+    float: left;
+    width: 223px;
+    height: 52px;
+    text-indent: -999em;
+    margin-top: 15px;
+}
+
+.header-nav-links {
+    list-style: none;
+    float: right;
+    margin: 40px 0 0 0;
+}
+
+.header-nav-links li{
+    display: inline;
+}
+
+.header-nav-links li a {
+    text-decoration: none;
+    color: #12457c;        
+    font-size: 14px;
+    margin-left: 35px;
+}
+
+.header-nav-links li a:hover {
+    color: #4ca3d7;
+}

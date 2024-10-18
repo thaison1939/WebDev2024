@@ -1,0 +1,39 @@
+.asker-item {
+    display: flex;
+    align-items: center;
+    border: 1px;
+    overflow-x: hidden;
+    margin-bottom: 5px;
+    
+    .asker-image {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        margin-right: 5px;
+    }
+    
+    .asker-details {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .asker-link {
+        text-decoration: none;
+        color: #12457c; 
+        margin-bottom: 1px;
+    }
+    
+    .asker-link:hover {
+        color: #4ca3d7; 
+    }
+    
+    .asker-name {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    
+    .asker-field {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+}

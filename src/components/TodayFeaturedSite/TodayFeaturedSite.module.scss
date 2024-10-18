@@ -1,26 +1,26 @@
 .container{
-    display: inline-flex;
-    flex-direction: column;
+    width: 220px;
+    float: left;
+    margin-top: 10px;
     
     .container-without-heading {
-        display: inline-block;
         border: 2px solid #e8edee;
         padding: 5px;
         border-radius: 6px;
-        overflow: hidden;
     }
     
     .heading {
-        display: inline-block;
-        color: #000000;
+        color: #444;
         font-size: 15px;
+        margin: 3px 0 3px 0;
         font-weight: bold;
         line-height: 27px;
-        margin-bottom: 5px;
     }
     
     .icon-image {
         float: left;
+        margin-top: -5px;
+        margin-left: -5px;
     }
     
     .icon-image img {
@@ -30,30 +30,41 @@
     
     .right-panel {
         display: inline-block;
-        width: 150px;
+        width: 140px;
+        vertical-align: top;
         color: #444444;
         font-size: 12px;
         margin-left: 10px;
-        margin-bottom: 10px;
     }
     
     .right-panel a {
-        font-size: 12px;
+        text-decoration: none;
+        color: #12457c;
+        font-size: 13px;
         font-weight: 700;
     }
     
-    .satistics {
-        width: 150px;
+    .right-panel a:hover {
+        color: #4ca3d7;
+    }
+
+    .statistics {
+        display: inline-block;
     }
     
     .stats-container {
         float: left;
-        margin-right: 20px;
+        margin-left: 15px;
+    }
+
+    .stats-container:first-of-type {
+        margin-left: 5px;
     }
     
     .number {
-        color: red;
-        font-size: 25px;
+        font-size: 22px;
+        font-weight: 300;
+        color: #f35d5f;
     }
     
     .label {

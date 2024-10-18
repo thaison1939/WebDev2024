@@ -1,38 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import QuestionList from './components/QuestionList/QuestionList';
-import questionsData from './_SAMPLE_DATA/questions.json';
-import Navbar from './components/Navbar/Navbar';
+import React from 'react';
+import HomePage from './pages/HomePage';
+import Tour from './pages/Tour';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import PostContent from './pages/PostContent';
 
-
-import styles from './App.module.scss'
-
-import TodayFeaturedSite from './components/TodayFeaturedSite/TodayFeaturedSite';
-import siteData from './_SAMPLE_DATA/todayfeaturedsite.json';
-import Footer from './components/Footer/Footer';
 
 function App() {
-  const [questions, setQuestions] = useState([]);
-
-  useEffect(() => {
-      const questionArray = Object.values(questionsData);
-      setQuestions(questionArray);
-  }, []);
-
-  
   return (
-      <div className={styles.container}>
-        <Navbar/>
-        <QuestionList questions={questions} />
-        <TodayFeaturedSite
-          image={siteData.image}
-          title={siteData.title}
-          paragraph={siteData.paragraph}
-          questions={siteData.questions}
-          answers={siteData.answers}
-          answered={siteData.answered}
-        />
-      </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<HomePage />}></Route>
+        <Route path="/tour" element={<Tour />}></Route>
+        <Route path="/questions/:id" element={<PostContent />}></Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

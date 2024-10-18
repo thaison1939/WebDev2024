@@ -1,0 +1,35 @@
+{
+    "sidebarContent": [
+        {
+            "channels": [
+                {
+                    "img": "homeIcon",
+                    "name": "Home",
+                    "alt": "home-icon"
+                },
+                {
+                    "img": "questionIcon",
+                    "name": "Questions",
+                    "alt": "question-icon"
+                },
+                {
+                    "img": "tagIcon",
+                    "name": "Tags",
+                    "alt": "tags-icon"
+                },
+                {
+                    "img": "companionIcon",
+                    "name": "Users",
+                    "alt": "users-icon"
+                },
+                {
+                    "img": "answerIcon",
+                    "name": "Unanswered",
+                    "alt": "answer-icon"
+                }
+            ],
+            "img": "overflowAiIcon",
+            "alt": "overflow-AI"
+        }
+    ]
+}

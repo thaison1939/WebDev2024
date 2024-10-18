@@ -1,0 +1,89 @@
+.ThreadPost {
+    padding-left: 5px;
+
+    .threadHeader {
+        display: flex;
+        align-items: center;
+        min-width: 80px;
+
+    h1 {
+        font-size: 27px;
+        font-weight: 400;
+        color: #3c3c3c;
+    }
+
+    .buttonContainer {
+        margin-left: auto;
+        background-color: #e07c6a;
+        color: white;
+        border: none;
+        font-size: 12px;
+        width: 93px;
+        border-radius: 5px;
+        padding: 10px 5px;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: #d06558;
+        }
+    }
+  }
+
+
+  .time {
+        display: flex;
+        gap: 10px;
+        color: #666;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e1e1e1;
+
+        span {
+            font-size: 0.9rem;
+            margin-left: 5px;
+            font-weight: bold;
+        }
+    }
+   
+    .threadBody {
+        display: flex;
+        align-items: flex-start; 
+
+        .voting-container {
+            margin-right: 20px; 
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            border-radius: 8px;
+
+            .time {
+                display: flex;
+                gap: 10px;
+                font-size: 0.9rem;
+
+                span {
+                    margin-left: 5px;
+                    font-weight: bold;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            .startingLine {
+                margin: 23px 0px;
+                display: flex;
+                justify-content: flex-start;   
+
+                .tag {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
+}

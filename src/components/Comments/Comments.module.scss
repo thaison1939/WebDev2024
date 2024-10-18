@@ -1,0 +1,48 @@
+.comments {
+    margin-top: 4px;
+    margin-left: 7%;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e1e1e1; 
+}
+
+.upvote {
+    color: #f48023;
+    font-size: 13px;
+    font-weight: bold;
+    min-width: 19px;
+    text-align: right;
+    margin-right: 7px;
+}
+
+.text {
+    padding: 7px;
+    border-radius: 3px;
+    flex-grow: 1;
+    display: inline-block;
+    white-space: normal; 
+}
+
+p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.author {
+    font-size: 12px;
+    color: #0076cc;
+    text-decoration: none;
+}
+
+.author:hover {
+    text-decoration: underline;
+}
+
+.date {
+    font-size: 12px;
+    color: #6a737c;
+}
