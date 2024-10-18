@@ -1,27 +1,26 @@
-// ThreadPost.module.scss
 .ThreadPost {
-    padding: 20px;
+    padding-left: 5px;
 
     .threadHeader {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        min-width: 80px;
 
     h1 {
-        font-size: 2rem;
+        font-size: 27px;
         font-weight: 400;
         color: #3c3c3c;
     }
 
     .buttonContainer {
+        margin-left: auto;
         background-color: #e07c6a;
         color: white;
         border: none;
         font-size: 12px;
         width: 93px;
         border-radius: 5px;
-        padding: 10px 15px;
+        padding: 10px 5px;
         cursor: pointer;
     
         &:hover {
@@ -30,17 +29,16 @@
     }
   }
 
-  .content {
-      // Style for the rest of the content
-  }
 
   .time {
         display: flex;
         gap: 10px;
-        font-size: 0.9rem;
         color: #666;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e1e1e1;
 
         span {
+            font-size: 0.9rem;
             margin-left: 5px;
             font-weight: bold;
         }
@@ -64,19 +62,19 @@
                 gap: 10px;
                 font-size: 0.9rem;
 
-              span {
-                  margin-left: 5px;
-                  font-weight: bold;
-              }
+                span {
+                    margin-left: 5px;
+                    font-weight: bold;
+                }
             }
 
             p {
-                margin-top: 10px;
                 font-size: 1rem;
                 line-height: 1.6;
             }
 
             .startingLine {
+                margin: 23px 0px;
                 display: flex;
                 justify-content: flex-start;   
 
@@ -88,13 +86,4 @@
         }
     }
 
-    .tags-user {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid #ddd;
-
-    } 
 }

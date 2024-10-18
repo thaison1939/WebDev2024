@@ -8,12 +8,12 @@ import historyIcon from '../../../src/assets/logHistory.png';
 
 const Voting = ({ upvote, upvoteImg, downvoteImg, saveImg, historyImg }) => {
     return (
-        <div className={styles["voting-container"]}>
-            <img src={upvoteIcon} alt="Upvote" className={styles["voting-icon"]} />
+        <div className={styles["votingContainer"]}>
+            <img src={upvoteIcon} alt="Upvote" className={styles["votingIcon"]} />
             <span className={styles["upvote-count"]}>{upvote}</span>
-            <img src={downvoteIcon} alt="Downvote" className={styles["voting-icon"]} />
-            <img src={bookmarkIcon} alt="Save" className={styles["voting-icon"]} />
-            <img src={historyIcon} alt="History" className={styles["voting-icon"]} />
+            <img src={downvoteIcon} alt="Downvote" className={styles["votingIcon"]} />
+            <img src={bookmarkIcon} alt="Save" className={styles.bookmarkIcon} />
+            <img src={historyIcon} alt="History" className={styles.bookmarkIcon} />
         </div>
     );
 };

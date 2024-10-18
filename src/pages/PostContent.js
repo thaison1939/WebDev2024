@@ -14,7 +14,7 @@ import postHeaderData from '../_SAMPLE_DATA/postHeader.json';
 import commentsData from '../_SAMPLE_DATA/comments.json';
 import { useParams } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
-
+import tagData from '../_SAMPLE_DATA/tagName.json';
 
 const PostContent = ({ threadId }) => {
     const { id } = useParams();
@@ -66,16 +66,22 @@ const PostContent = ({ threadId }) => {
                         {threadPostData.posts.map((post, index) => (
                             <div key={post.id} className={styles.body}>
 
+                            {index === 0 ? (
+                                <ThreadPost
+                                    asked={post.asked}
+                                    modified={post.modified}
+                                    viewed={post.viewed}
+                                    title={post.title}
+                                    body={post.body}
+                                    tags={tagData.tags}
+                                />
+                            ) : (
+                                <ThreadPost
+                                    body={post.body}
+                                />
+                            )} 
 
-                <ThreadPost  
-                  title={index === 0 ? post.title : undefined}  
-                  body={post.body}
-                  button={index === 0 ? (
-                    <button className={styles.askButton}>Ask Question</button>
-                  ) : null}
-                />
-
-                <Comments comments={commentsData.comments} threadId={post.id} />
+                                <Comments comments={commentsData.comments} threadId={post.id} />
                             </div>
                         ))}
                     </div>

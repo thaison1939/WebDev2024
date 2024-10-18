@@ -7,44 +7,40 @@ import bronzeIcon from '../../assets/bronze.png';
 const UserInfo = ({ time, avatar, username, icon, reputation, badges }) => {
     return (
         <div className={styles.userInfo}>
+
             <div className={styles.time}>
                 <a href="#" className={styles.blueText}>{time}</a>
-                <img src={avatar} alt={`${username}'s avatar`} className={styles.avatar}></img>
             </div>
 
-            <div className={styles.authorInfo}>
-                <div className={styles.author}>
-                    <a href="">{username}</a>
-                    <span>{icon}</span>
-                </div>
+            <div className={styles.userDetails}>
+                <img src={avatar} alt={`${username}'s avatar`} className={styles.avatar} />
 
-                <div className={styles.repuScore}>
-                    <p>{reputation}</p>
+                <div className={styles.info}>
+                    <a href="">{username}</a> <span>{icon}</span>
 
-                    {badges && (
+                    <div className={styles.repuScore}>
+                        <p>{reputation}</p>
                         <div className={styles.badges}>
                             {badges.gold > 0 && (
-                                <>
+                                <span className={styles.badge}>
                                     <img src={goldIcon} alt="gold badge" />
                                     <p>{badges.gold}</p>
-                                </>
+                                </span>
                             )}
-
                             {badges.silver > 0 && (
-                                <>
+                                <span className={styles.badge}>
                                     <img src={silverIcon} alt="silver badge" />
                                     <p>{badges.silver}</p>
-                                </>
+                                </span>
                             )}
-
                             {badges.bronze > 0 && (
-                                <>
+                                <span className={styles.badge}>
                                     <img src={bronzeIcon} alt="bronze badge" />
                                     <p>{badges.bronze}</p>
-                                </>
+                                </span>
                             )}
                         </div>
-                    )}
+                    </div>
                 </div>
             </div>
         </div>
