@@ -1,81 +1,54 @@
 import React from 'react';
-import LeftSideBar from '../LeftSideBar/LeftSideBar';
-import Related from '../Related/Related';
 import Voting from '../Voting/Voting';
-import UserInfo from '../UserInfo/UserInfo';
-import { useParams } from 'react-router-dom';
 import styles from './ThreadPost.module.scss';
-
-import Tag from '../Tag/Tag';
-import questionData from '../../_SAMPLE_DATA/questions.json';
-import votingData from '../../_SAMPLE_DATA/voting.json';
 import userInfoData from '../../_SAMPLE_DATA/userInfo.json';
-import postData from '../../_SAMPLE_DATA/threadPost.json';
-import tagData from '../../_SAMPLE_DATA/tagName.json';
+import Tag from '../Tag/Tag';
+import UserInfo from '../UserInfo/UserInfo';
+import { formatDistanceToNowStrict, differenceInDays } from 'date-fns';
 
-const ThreadPost = ()  => {
+const ThreadPost = ({ threadPost })  => {
+    console.log(threadPost);
+    const user = userInfoData.users.find((user) => user.id === threadPost.authorId);
 
-    const { id } = useParams();
 
-    const question = questionData.questions.find((question) => question.id === id);
-    const voting = votingData.votings.find((voting) => voting.questionId === id);
-    const userInfo = userInfoData.users.find((userInfo) => userInfo.questionId === id);
-    const post = postData.posts.find((post) => post.id === id);
-
-    if (!post && !question) {
-        return <h1>Sorry! Page was not found!</h1>
-    }
-
-    const { title, body, asked, modified, viewed } = post;
-
-    const user = userInfo ? {
-        time: userInfo.time,
-        username: userInfo.username,
-        avatar: userInfo.avatar,
-        reputation: userInfo.reputation,
-        badges: userInfo.badges,
-        icon: userInfo.icon,
-    } : {};
-
-    const vote = voting ? {
-        upvote: voting.upvote
-    } : {};
-
+    const createdDate = new Date(threadPost.createdTime);
+    const updatedDate = new Date(threadPost.updatedTime);
+    const formatTimeAgo = (date) => {
+        const daysDiff = differenceInDays(new Date(), date);
+        if (daysDiff === 1) {
+            return 'yesterday';
+        }
+        return formatDistanceToNowStrict(date, { addSuffix: true });
+    };
 
     return (
         <div className={styles.ThreadPost}>
-            { title && (
-                <div className={styles["threadHeader"]}>
-                    <h1>{title}</h1>
-                </div>
-            )}
+            <div className={styles["threadHeader"]}>
+                <h1>{threadPost.title}</h1>
+            </div>
 
-            { asked && modified && viewed && (
-                <div className={styles.time}>
-                    <p>Asked<span>{asked}</span></p>
-                    <p>Modified<span>{modified}</span></p>
-                    <p>Viewed<span>{viewed}</span></p>
-                </div>
-            )}
+            <div className={styles.time}>
+                <p>Asked<span>{formatTimeAgo(createdDate)}</span></p>
+                <p>Modified<span>{formatTimeAgo(updatedDate)}</span></p>
+                <p>Viewed<span>{threadPost.views} times</span></p>
+            </div>
             
             <div className={styles.threadBody}>
-                {voting && <Voting {...vote}/>}
+                <Voting upvote={threadPost.upvote}/>
                 
                 <div className={styles.content}>
-                    <p>{body}</p>
+                    <p>{threadPost.body}</p>
 
-                    { tagData.tags && (
-                        <div className={styles.startingLine}>
-                            <div className={styles.tag}>
-                                {tagData.tags && tagData.tags.map((tag, index) => (
-                                    <Tag key={index} nameTag={tag}/> 
-                                ))}
-                            </div>
-                        </div> 
-                    )}
-                
+                    <div className={styles.startingLine}>
+                        <div className={styles.tag}>
+                            {threadPost.tags.map((tag, index) => (
+                                <Tag key={index} nameTag={tag}/> 
+                            ))}
+                        </div>
+                    </div> 
+            
                     <div className={styles["tags-user"]}>
-                        {userInfo && <UserInfo {...user} />} 
+                        <UserInfo {...user} />
                     </div>
                 </div>
             </div>

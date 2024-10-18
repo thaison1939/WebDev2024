@@ -3,6 +3,7 @@ import Question from '../Question/Question';
 import styles from './QuestionList.module.scss'
 
 const QuestionList = ({ questions }) => {
+    console.log(questions);
     const [sortBy, setSortBy] = useState('hot');
     const [currentPage, setCurrentPage] = useState(1);
     const [questionsPerPage, setQuestionsPerPage] = useState(15);

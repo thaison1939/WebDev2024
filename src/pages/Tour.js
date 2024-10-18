@@ -7,8 +7,8 @@ import AskQuestion from "../components/TourAnimation/AskQuestion/AskQuestion.js"
 import TourIntro from "../components/TourIntro/TourIntro.js";
 import TourOutro from "../components/TourOutro/TourOutro.js";
 import TourComponentList from "../components/TourAnimation/TourList/TourComponentList.js";
-import IntroData from "../_SAMPLE_DATA/TourIntro.json";
-import OutroData from "../_SAMPLE_DATA/TourOutro.json";
+import IntroData from "../_SAMPLE_DATA/tourIntro.json";
+import OutroData from "../_SAMPLE_DATA/tourOutro.json";
 import toursData from "../_SAMPLE_DATA/toursData.json";
 import NewUser from "../components/NewUser/NewUser.js";
 
