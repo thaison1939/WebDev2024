@@ -1,0 +1,32 @@
+{
+  "posts": 
+    [
+      {
+        "id": "e7b8f8e2-8c3d-4b6a-9f3e-2b8e8c3d4b6a",
+        "authorId": 1,
+        "questionId": "58b643bd-9260-4f87-89e6-3acb157e10bc",
+        "body": "Previously, I was using html, css, and javascript to build websites. I heard about React and I'm curious about it. Can someone explain what React is? How is it different from the traditional way of building websites? ",
+        "relatedQuestions": ["a2b1c3d4-e5f6-7g8h-9i0j-1k2l3m4n5o6p", "b3c4d5e6-f7g8-h9i0-j1k2-l3m4n5o6p7q8"],
+        "upvotes": 3,
+        "views": 5
+      },
+      {
+        "id": "71d8f93b-975a-40d9-a1d1-594442a35b68",
+        "authorId": 2,
+        "questionId": "a2b1c3d4-e5f6-7g8h-9i0j-1k2l3m4n5o6p",
+        "body": "I've been using Node.js for a while now. I'm curious about how it works. Can someone explain what Node.js is? How is it different from other backend technologies?",
+        "relatedQuestions": ["58b643bd-9260-4f87-89e6-3acb157e10bc", "b3c4d5e6-f7g8-h9i0-j1k2-l3m4n5o6p7q8"],
+        "upvotes": 2,
+        "views": 4
+      },
+      {
+        "id": "b6a9f3e2-8c3d-4b6a-9f3e-2b8e8c3d4b6a",
+        "authorId": 3,
+        "questionId": "b3c4d5e6-f7g8-h9i0-j1k2-l3m4n5o6p7q8",
+        "body": "I've been using Angular for a while now. I'm curious about how it works. Can someone explain what Angular is? How is it different from other frontend technologies?",
+        "relatedQuestions": ["58b643bd-9260-4f87-89e6-3acb157e10bc", "a2b1c3d4-e5f6-7g8h-9i0j-1k2l3m4n5o6p"],
+        "upvotes": 4,
+        "views": 6
+      }
+    ]
+}

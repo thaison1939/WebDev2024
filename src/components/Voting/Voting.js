@@ -6,7 +6,7 @@ import bookmarkIcon from '../../../src/assets/bookmark.png';
 import historyIcon from '../../../src/assets/logHistory.png';
 
 
-const Voting = ({ upvote, upvoteImg, downvoteImg, saveImg, historyImg }) => {
+const Voting = ({ upvote }) => {
     return (
         <div className={styles["votingContainer"]}>
             <img src={upvoteIcon} alt="Upvote" className={styles["votingIcon"]} />

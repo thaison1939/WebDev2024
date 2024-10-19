@@ -2,13 +2,11 @@
     "widgets": 
     [
         {
-            "questionId": "58b643bd-9260-4f87-89e6-3acb157e10bc",
-            "id": "26c2ede6-9285-487a-9c38-54a4e68c03af",
             "title": "Featured on Meta",
             "widgetContent": [
                 {
                     "img": "../../chat.png",
-                    "text": "Upcoming initiatives on Stack Overflow and across the Stack Exchange network..."
+                    "text": "Upcoming initiatives on USTH Overflow and across the USTH Exchange network..."
                 },
                 
                 {
