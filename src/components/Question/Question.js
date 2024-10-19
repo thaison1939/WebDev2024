@@ -4,6 +4,7 @@ import Tag from '../Tag/Tag';
 import { formatDistanceToNowStrict, differenceInDays } from 'date-fns';
 
 const Question = ({ image, title, link, tags, answer, createdTime, author, field}) => {
+    console.log(createdTime)
     const createdDate = new Date(createdTime);
     
     const formatTimeAgo = (date) => {

@@ -1,45 +1,82 @@
 {
-    "comments": [
-      {
-        "threadId": "58b643bd-9260-4f87-89e6-3acb157e10bc",
-        "comments": [
-          {
-            "id": "1",
-            "upvote": 19,
-            "text": "A bit of encouragement, then let natural selection take its course.",
-            "author": "A rural reader",
-            "date": "Oct 13 at 20:36"
-          },
-          {
-            "id": "2",
-            "upvote": 36,
-            "text": "I was one of those students. Perhaps my perspective is useful: I had previous knowledge which typically covered ~50% of the material taught in most courses.",
-            "author": "Patrick",
-            "date": "Oct 14 at 8:56"
-          },
-          {
-            "id": "3",
-            "upvote": 33,
-            "text": "University students are old enough to be responsible for themselves. As long as they don't disturb anyone, just let them do whatever they do.",
-            "author": "Green绿色",
-            "date": "Oct 14 at 11:22"
-          },
-          {
-            "id": "4",
-            "upvote": 27,
-            "text": "You have an obligation as the instructor not to let them distract students who are interested in following the lecture.",
-            "author": "Adam Přenosil",
-            "date": "Oct 14 at 12:55"
-          },
-          {
-            "id": "5",
-            "upvote": 8,
-            "text": "I have ADHD. When I am learning something new to me but that doesn’t require my full attention, I actually find it easier to pay attention if I do something else.",
-            "author": "Kevin",
-            "date": "Oct 14 at 17:27"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "comments": [
+    {
+      "postId": "e7b8f8e2-8c3d-4b6a-9f3e-2b8e8c3d4b6a",
+      "comments": [
+        {
+          "commentId": "a1a2a3b4-c5d6-789e-1234-abcd5678ef90",
+          "upvote": 19,
+          "text": "React is a great library for building user interfaces.",
+          "author": "Jane Doe",
+          "date": "Oct 12 at 14:22"
+        },
+        {
+          "commentId": "b2b3b4c5-d6e7-890f-1234-bcde6789fg01",
+          "upvote": 27,
+          "text": "If you want to know more about React, check out the official documentation.",
+          "author": "Alex M.",
+          "date": "Oct 12 at 15:00"
+        },
+        {
+          "commentId": "c3c4c5d6-e7f8-901a-2345-cdef7890gh12",
+          "upvote": 34,
+          "text": "Traditional website without React has many limitations.",
+          "author": "Chris P.",
+          "date": "Oct 13 at 10:15"
+        }
+      ]
+    },
+    {
+      "postId": "71d8f93b-975a-40d9-a1d1-594442a35b68",
+      "comments": [
+        {
+          "commentId": "d4d5d6e7-f8g9-012b-3456-defg8901hi23",
+          "upvote": 25,
+          "text": "Nodejs is a great platform for building APIs.",
+          "author": "Michael J.",
+          "date": "Oct 13 at 17:40"
+        },
+        {
+          "commentId": "e5e6e7f8-g9h0-123c-4567-efgh9012ij34",
+          "upvote": 18,
+          "text": "Compare to other backend technologies, Nodejs is much faster.",
+          "author": "Sarah L.",
+          "date": "Oct 13 at 19:05"
+        },
+        {
+          "commentId": "f6f7g8h9-h0i1-234d-5678-fghi0123jk45",
+          "upvote": 20,
+          "text": "Nodejs uses JavaScript, which makes it easier to learn for front-end developers.",
+          "author": "John D.",
+          "date": "Oct 13 at 21:50"
+        }
+      ]
+    },
+    {
+      "postId": "b6a9f3e2-8c3d-4b6a-9f3e-2b8e8c3d4b6a",
+      "comments": [
+        {
+          "commentId": "g7g8h9i0-i1j2-345e-6789-ghij1234kl56",
+          "upvote": 30,
+          "text": "Angular is another popular framework for building web applications.",
+          "author": "Daniel W.",
+          "date": "Oct 14 at 09:45"
+        },
+        {
+          "commentId": "h8h9i0j1-j2k3-456f-7890-hijk2345lm67",
+          "upvote": 40,
+          "text": "I would suggest React over Angular for most projects.",
+          "author": "Emma T.",
+          "date": "Oct 14 at 11:00"
+        },
+        {
+          "commentId": "i9i0j1k2-k3l4-567g-8901-ijkl3456mn78",
+          "upvote": 35,
+          "text": "If you want to know more about Angular, check out the official documentation.",
+          "author": "Robert B.",
+          "date": "Oct 14 at 14:30"
+        }
+      ]
+    }
+  ]
+}

@@ -1,32 +1,34 @@
 import React from 'react';
 import ThreadPost from '../components/ThreadPost/ThreadPost';
-import threadPostData from '../_SAMPLE_DATA/threadPost.json';
 import PostHeader from '../components/PostHeader/postHeader';
 import styles from './PostContent.module.scss';
 import LeftSideBar from '../components/LeftSideBar/LeftSideBar';  
 import SideBarWidget from '../components/SideBarWidget/SideBarWidget'; 
 import Comments from '../components/Comments/Comments';
 import Related from '../components/Related/Related';  
-import relatedQuestionsData from '../_SAMPLE_DATA/relatedQuestions.json';
 import sideBarWidgetData from '../_SAMPLE_DATA/widget.json';
 import leftSideBarData from '../_SAMPLE_DATA/leftSideBar.json';
 import postHeaderData from '../_SAMPLE_DATA/postHeader.json';
 import commentsData from '../_SAMPLE_DATA/comments.json';
 import { useParams } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
-import tagData from '../_SAMPLE_DATA/tagName.json';
+import questionData from '../_SAMPLE_DATA/questions.json';
+import postData from '../_SAMPLE_DATA/threadPosts.json';
 
-const PostContent = ({ threadId }) => {
+const PostContent = () => {
     const { id } = useParams();
 
-    if (!id) {
+    const question = questionData.questions.find((question) => question.id === id);
+    console.log(question);
+    const post = postData.posts.find((post) => post.questionId === id);
+
+    if (!question) {
         return (
             <h1>Sorry! Page was not found!</h1>
         );
     };
 
-    const relatedQuestionDetails = relatedQuestionsData.relatedQuestions.find((question) => question.id === id);
-    const widgetDetails = sideBarWidgetData.widgets.find((widget) => widget.questionId === id);
+    const widgetDetails = sideBarWidgetData.widgets[0];
 
     const lsbContent = leftSideBarData.sidebarContent[0];
 
@@ -38,14 +40,16 @@ const PostContent = ({ threadId }) => {
         }))
     } : {};
 
-    const relatedQuestions = relatedQuestionDetails ? {
-        questions: relatedQuestionDetails.questions.map((question) => ({
-            upvote: question.upvote,
-            title: question.title
-        }))
-    } : {};
-
-    const { post } = threadPostData;
+    const threadPost = {
+        title: question.title,
+        authorId: post.authorId,
+        body: post.body,
+        createdTime: question.created_time,
+        updatedTime: question.updated_time,
+        tags: question.tags,
+        upvote: post.upvotes,
+        views: post.views,
+    };
 
     return (
         <div className={styles.postContent}>
@@ -63,32 +67,13 @@ const PostContent = ({ threadId }) => {
 
                 <div className={styles.mainContent}>
                     <div className={styles.content}>
-                        {threadPostData.posts.map((post, index) => (
-                            <div key={post.id} className={styles.body}>
-
-                            {index === 0 ? (
-                                <ThreadPost
-                                    asked={post.asked}
-                                    modified={post.modified}
-                                    viewed={post.viewed}
-                                    title={post.title}
-                                    body={post.body}
-                                    tags={tagData.tags}
-                                />
-                            ) : (
-                                <ThreadPost
-                                    body={post.body}
-                                />
-                            )} 
-
-                                <Comments comments={commentsData.comments} threadId={post.id} />
-                            </div>
-                        ))}
+                        <ThreadPost threadPost={threadPost} />
+                        <Comments comments={commentsData.comments} postId={post.id} />
                     </div>
 
                     <div className={styles.rightSidebar}>
                         <SideBarWidget widget={widgetContent} />
-                        {relatedQuestions && <Related relatedQuestions={relatedQuestions} />}
+                        <Related relatedQuestions={post.relatedQuestions}/>
                     </div>
                 </div>
             </div>
