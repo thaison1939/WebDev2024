@@ -7,7 +7,6 @@ import UserInfo from '../UserInfo/UserInfo';
 import { formatDistanceToNowStrict, differenceInDays } from 'date-fns';
 
 const ThreadPost = ({ threadPost })  => {
-    console.log(threadPost);
     const user = userInfoData.users.find((user) => user.id === threadPost.authorId);
 
 

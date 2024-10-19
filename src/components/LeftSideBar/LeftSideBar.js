@@ -37,7 +37,7 @@ const leftSideBar = ({ content }) => {
             <div className={styles.team}>
                 <div className={styles["bold-text"]}>TEAMS</div>
                 <img src={imgMapping[img]} alt={alt}></img>
-                <p><span className={styles["bold"]}>Now available on Stack Overflow for Teams!</span> AI features where you work: search, IDE, and chat.</p>
+                <p><span className={styles["bold"]}>Now available on USTH Overflow for Teams!</span> AI features where you work: search, IDE, and chat.</p>
                 <button className={styles["orangebtn"]}>Learn more</button>
                 <a href="">Explore Teams</a>
             </div>

@@ -68,6 +68,7 @@ const PostContent = () => {
                 <div className={styles.mainContent}>
                     <div className={styles.content}>
                         <ThreadPost threadPost={threadPost} />
+                        <Comments comments={commentsData.comments} postId={post.id} />
                     </div>
 
                     <div className={styles.rightSidebar}>
