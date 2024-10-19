@@ -4,7 +4,7 @@ import styles from "./TourIntro.module.scss";
 const TourIntro = ({ intro }) => {
   const title = intro.title;
   const image = intro.image;
-  const additionalInfo = intro.additionalInfo;
+  const additionalInfo = intro.additional_info;
   return (
     <div className={styles.container}>
       <h2 className={styles.h2}>{title}</h2>

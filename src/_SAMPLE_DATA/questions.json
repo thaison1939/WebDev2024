@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": "58b643bd-9260-4f87-89e6-3acb157e10bc",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
+      "image": "https://media1.tenor.com/m/EFDwfjT2GuQAAAAC/spinning-cat.gif",
       "title": "What is React?",
       "tags": ["react", "javascript", "frontend"],
       "answer": 3,
@@ -14,7 +14,7 @@
     },
     {
       "id": "a2b1c3d4-e5f6-7g8h-9i0j-1k2l3m4n5o6p",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSoW3g9hjXIasgon-kpzz-lD9z4SsalyPbZA&s",
+      "image": "https://media1.tenor.com/m/EFDwfjT2GuQAAAAC/spinning-cat.gif",
       "title": "What is Node.js?",
       "tags": ["nodejs", "javascript", "backend"],
       "answer": 2,
